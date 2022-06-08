@@ -1,0 +1,110 @@
+// USER VARIABLES SECTION
+
+$accent: #FF3C48 // Accent Color
+$fontsize: 16px // Body Font Size
+$black: #2C2C2C
+$white: #F5F5F5
+$grey: #303030
+$button-color: #424242
+$lineheight: 1.65 // Document Line Height
+$userfont: raleway-tm, sans-serif // User Font Family
+$titlefont: montserrat-tm, sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$index: calc((1vw + 1vh)/2)
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// Mixin adaptive value
+$maxWidthContainer: 1920
+$maxWidth: 1920
+@mixin adaptiv-value($property, $startSize, $minSize, $type)
+	$addSize: $startSize - $minSize
+	@if $type==1
+		#{$property}: $startSize + px
+		@media (max-width: #{$maxWidthContainer + px})
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+	@else if $type==2
+		#{$property}: $startSize + px
+		@media (min-width: #{$maxWidthContainer + px})
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
+
+	@else
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('montserrat-tm', normal, 100, '../fonts/montserrat-tm-100.woff2')
+@include font('montserrat-tm', normal, 400, '../fonts/montserrat-tm-regular.woff2')
+
+@include font('raleway-tm', normal, 300, '../fonts/raleway-tm-300.woff2')
+@include font('raleway-tm', normal, 400, '../fonts/raleway-tm-regular.woff2')
+@include font('raleway-tm', normal, 500, '../fonts/raleway-tm-500.woff2')
+@include font('raleway-tm', normal, 600, '../fonts/raleway-tm-600.woff2')
+@include font('raleway-tm', normal, 700, '../fonts/raleway-tm-700.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $white
+	min-width: 320px
+	height: 100%
+	position: relative
+	//overflow-x: hidden
+	&._lock 
+		overflow: hidden
+		touch-action: none
+	
+.wrapper
+	position: relative
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow: hidden	
+	> header 
+		flex: 1 1 auto
+	
+	> * 
+		min-width: 0
+
+[class*="__container"] 
+	max-width: 1440px
+	margin: 0 auto
+	padding: 0 15px
+
+.bg-grey
+	background-color: $grey
