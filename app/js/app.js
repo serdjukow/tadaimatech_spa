@@ -1,9 +1,9 @@
-// // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
 
 document.addEventListener("DOMContentLoaded", () => {
+	
+//  Бегущая строка
 	const text = document.querySelector(".banner p");
-
 	animate(text);
 
 	function animate(element) {
@@ -24,19 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	const currentDate = () => {
 		let currentYear = new Date().getFullYear();
 		document.getElementById("current-year").innerHTML = currentYear;
-	}
-	currentDate()
+	};
+	currentDate();	
 
-	const menuBurger = () => {
+	const menu = () => {
 		const menuButton = document.querySelector("#nav-icon");
 		const navigation = document.querySelector(".navigation");
 		const body = document.querySelector("body");
 		const bodyOverlay = document.querySelector(".body-overlay");
 
-		document.addEventListener("click", (event) => {
-			if (event.target.closest(".menu-item")) toggleNavActive();
-			if (event.target.closest("#nav-icon")) toggleNavActive();
-			if (event.target.closest(".body-overlay")) toggleNavActive();
+		document.addEventListener("click", (e) => {
+			let el = e.target;
+			el.closest("#nav-icon") &&toggleNavActive();
+			el.closest(".menu-item") &&toggleNavActive()
+			el.closest(".body-overlay") &&toggleNavActive()
+			el.closest(".menu-game__item") &&toggleNavActive()
+
+			
 		});
 
 		const toggleNavActive = () => {
@@ -46,5 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
 			bodyOverlay.classList.toggle("_active");
 		};
 	};
-	menuBurger();
+	menu();
 });
