@@ -1,8 +1,5 @@
-// import '~/app/libs/mmenu/dist/mmenu.js'
-
 document.addEventListener("DOMContentLoaded", () => {
-	
-//  Бегущая строка
+	//  Бегущая строка
 	const text = document.querySelector(".banner p");
 	animate(text);
 
@@ -25,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		let currentYear = new Date().getFullYear();
 		document.getElementById("current-year").innerHTML = currentYear;
 	};
-	currentDate();	
+	currentDate();
 
 	const menu = () => {
 		const menuButton = document.querySelector("#nav-icon");
@@ -35,12 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		document.addEventListener("click", (e) => {
 			let el = e.target;
-			el.closest("#nav-icon") &&toggleNavActive();
-			el.closest(".menu-item") &&toggleNavActive()
-			el.closest(".body-overlay") &&toggleNavActive()
-			el.closest(".menu-game__item") &&toggleNavActive()
-
-			
+			el.closest("#nav-icon") && toggleNavActive();
+			el.closest(".menu-item") && toggleNavActive();
+			el.closest(".body-overlay") && toggleNavActive();
+			el.closest(".menu-game__item") && toggleNavActive();
 		});
 
 		const toggleNavActive = () => {
@@ -51,4 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
 		};
 	};
 	menu();
+	
+
+	function preloaderToHtml() {
+		const gameBody = document.querySelector(".game__body");
+		gameBody.innerHTML = '';
+		gameBody.innerHTML = `
+			<div class="game__preloader preloader">
+			<div class="preloader__container">
+				<div class="preloader__track">
+					<span></span>
+				</div>
+				<div class="preloader__title">Подгружается геймификация...</div>
+			</div>
+		</div>
+		`;
+	}
+	//preloaderToHtml()
 });

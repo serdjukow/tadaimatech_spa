@@ -5,12 +5,12 @@ $fontsize: 16px // Body Font Size
 $black: #2C2C2C
 $white: #F5F5F5
 $grey: #303030
-$button-color: #424242
+$button-bg: #424242
 $lineheight: 1.65 // Document Line Height
 $userfont: raleway-tm, sans-serif // User Font Family
 $titlefont: montserrat-tm, sans-serif
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-$index: calc((1vw + 1vh)/2)
+$index: calc((1vw + 1vh))
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
@@ -60,6 +60,12 @@ $maxWidth: 1920
 @include font('raleway-tm', normal, 600, '../fonts/raleway-tm-600.woff2')
 @include font('raleway-tm', normal, 700, '../fonts/raleway-tm-700.woff2')
 
+@include font('noto-sans-tm', normal, 300, '../fonts/noto-sans-tm-300.woff2')
+@include font('noto-sans-tm', normal, 400, '../fonts/noto-sans-tm-regular.woff2')
+@include font('noto-sans-tm', normal, 500, '../fonts/noto-sans-tm-500.woff2')
+@include font('noto-sans-tm', normal, 600, '../fonts/noto-sans-tm-600.woff2')
+@include font('noto-sans-tm', normal, 700, '../fonts/noto-sans-tm-700.woff2')
+
 // GENERAL CSS SETTINGS
 
 ::placeholder
@@ -101,10 +107,10 @@ body
 	> * 
 		min-width: 0
 
-[class*="__container"] 
-	max-width: 1440px
-	margin: 0 auto
-	padding: 0 15px
+// [class*="__container"] 
+// 	max-width: 1440px
+// 	margin: 0 auto
+// 	padding: 0 15px
 
 .bg-grey
 	background-color: $grey

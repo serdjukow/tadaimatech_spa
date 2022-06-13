@@ -8,6 +8,7 @@
 	position: absolute;
 	right: -330px;
 	top: 70px;
+	top: calc($index * 2.8);
 	height: calc(100vh - 70px);
 	padding: 30px 30px 10px 15px;
 	min-width: 300px;
@@ -27,18 +28,19 @@
 .menu {
 	list-style: none;
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 	.menu-item {
 		border-bottom: 1px solid rgba(#d9d9d9, 0.15);
 		max-width: 240px;
-		padding: 20px 0;
+		padding: 15px 0;
 		a {
 			font-weight: 400;
-			font-size: 26px;
+			font-size: 20px;
 			line-height: 1.2;
 			color: rgba(#ffffff, 0.75);
 			text-decoration: none;
 			text-transform: uppercase;
+			user-select: none;
 			transition: color 0.25s ease;
 			@media (any-hover: hover) {
 				&:hover {
@@ -52,18 +54,19 @@
 }
 
 .menu-game {
-	padding: 20px 0;
+	padding: 15px 0;
 	border-bottom: 1px solid rgba(#d9d9d9, 0.15);
-	
+
 	// .menu-game__title
 
 	&__title {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		font-weight: 400;
-		font-size: 26px;
+		font-size: 20px;
 		line-height: 1.2;
 		color: rgba(#ffffff, 0.75);
 		text-transform: uppercase;
+		user-select: none;
 		transition: color 0.25s ease;
 	}
 
@@ -90,6 +93,8 @@
 			color: rgba(#d9d9d9, 0.5);
 			text-decoration: none;
 			text-transform: uppercase;
+
+			user-select: none;
 			transition: color 0.25s ease;
 			@media (any-hover: hover) {
 				&:hover {
@@ -99,7 +104,6 @@
 		}
 	}
 }
-
 
 .stores {
 	// .stores__link
@@ -111,6 +115,7 @@
 		opacity: 0.7;
 		border-radius: 3px;
 		overflow: hidden;
+		user-select: none;
 		transition: opacity 0.3s ease;
 		&:not(:last-child) {
 			margin-bottom: 14px;
