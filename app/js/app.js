@@ -522,7 +522,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		sessionStorage.getItem("menuButton")
 			? pageContent(sessionStorage.getItem("menuButton"))
 			: startContentToHtml();
-			settingsToHtml()
+			preloaderToHtml()
 	};
 	currentPageToHTML();
 
@@ -534,20 +534,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			let element = e.target;
 			pageContent(element.textContent.toLowerCase());
 			sessionStorage.setItem("menuButton", element.textContent.toLowerCase());
-			console.log(element.textContent.toLowerCase())
+			
 		});
 	}
 	navigation();
 
 	function pageContent(page) {
-		page === "главная" && startContentToHtml();
-		page === "о нас" && aboutUsToHtml();
-		page === "услуги" && servicesToHtml();
-		page === "команда" && teamToHtml();
-		page === "кейсы" && casesToHtml();
-		page === "контакты" && contactsToHtml();
-		page === "принципы работы" && principlesOfOperationToHtml();
-		page === "маркетплейс" && marketplaceToHtml()
+		page === "главная" && startContentToHtml() & preloaderToHtml();
+		page === "о нас" && aboutUsToHtml()& settingsToHtml();
+		page === "услуги" && servicesToHtml()& settingsToHtml();
+		page === "команда" && teamToHtml()& settingsToHtml();
+		page === "кейсы" && casesToHtml()& settingsToHtml();
+		page === "контакты" && contactsToHtml()& settingsToHtml();
+		page === "принципы работы" && principlesOfOperationToHtml()& settingsToHtml();
+		page === "маркетплейс" && marketplaceToHtml() & settingsToHtml()
 
 		
 	}
