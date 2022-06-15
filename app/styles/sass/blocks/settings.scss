@@ -1,5 +1,6 @@
 .settings {
 	position: relative;
+	user-select: none;
 
 	// .settings__progress
 
@@ -208,7 +209,6 @@
 			display: block;
 			background-position: center center;
 			background-repeat: no-repeat;
-			background-image: url(../images/dist/icons/rocket.svg);
 			background-size: cover;
 		}
 		&._active {
