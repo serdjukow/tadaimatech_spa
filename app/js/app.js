@@ -541,12 +541,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function pageContent(page) {
 		page === "главная" && startContentToHtml() & preloaderToHtml();
-		page === "о нас" && aboutUsToHtml()& settingsToHtml();
-		page === "услуги" && servicesToHtml()& settingsToHtml();
-		page === "команда" && teamToHtml()& settingsToHtml();
-		page === "кейсы" && casesToHtml()& settingsToHtml();
-		page === "контакты" && contactsToHtml()& settingsToHtml();
-		page === "принципы работы" && principlesOfOperationToHtml()& settingsToHtml();
+		page === "о нас" && aboutUsToHtml() & settingsToHtml();
+		page === "услуги" && servicesToHtml() & settingsToHtml();
+		page === "команда" && teamToHtml() & settingsToHtml();
+		page === "кейсы" && casesToHtml() & settingsToHtml();
+		page === "контакты" && contactsToHtml() & settingsToHtml();
+		page === "принципы работы" && principlesOfOperationToHtml() & settingsToHtml();
 		page === "маркетплейс" && marketplaceToHtml() & settingsToHtml()
 
 		
