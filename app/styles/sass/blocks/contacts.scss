@@ -13,7 +13,7 @@
 	// .block-contacts__map
 
 	&__map {
-		max-height: calc($index * 23.3);
+		max-height: calc($index * 22);
 		img {
 			display: block;
 			width: 100%;
@@ -25,13 +25,12 @@
 	// .block-contacts__form
 
 	&__form {
-		margin-bottom: calc($index * 1.46);
+	//	margin-bottom: calc($index * 1.46);
 	}
 	.page-title {
 	}
 }
 .contacts-form {
-	//flex: 1 1 calc($index * 14);
 	form > * {
 		&:not(:last-child) {
 			margin-bottom: calc($index * 0.66);
@@ -48,10 +47,14 @@
 		font-size: calc($index * 0.53);
 		line-height: 1.2;
 		color: rgba($white, 0.2);
+		&:focus,
+		&:required {
+			color: rgba($white, 0.9);
+		}
 	}
 
 	textarea {
-		min-height: calc($index * 9);
+		min-height: calc($index * 8);
 	}
 	
 
@@ -69,7 +72,7 @@
 	}
 
 	form {
-		margin-bottom: calc($index * 2);
+		margin-bottom: calc($index * 1.8);
 	}
 
 	&__button {
@@ -102,8 +105,7 @@
 		margin-right: calc($index * .4);
 		background-position: center center;
 		background-repeat: no-repeat;
-		opacity: .75;
-		
+		opacity: .75;		
 	}
 
 	// .form-info__address

@@ -4,6 +4,7 @@
 	padding: calc($index * 0.34);
 	display: flex;
 	gap: calc($index * 0.34);
+	height: 100vh;
 	&__left {
 		flex: 0 1 36.5%;
 		display: flex;
@@ -23,7 +24,7 @@
 	position: relative;
 	width: 100%;
 	flex: 1 1 auto;
-	padding: calc($index * 1);
+	padding: calc($index * .7) calc($index * 1);
 	&__body {
 		position: relative;
 		min-height: 100%;
@@ -31,7 +32,7 @@
 }
 
 .message {
-	flex: 0 1 27%;
+	flex: 0 1 calc($index * 9.66);
 }
 
 .header__right-top {
@@ -130,6 +131,8 @@
 }
 
 .page-content {
+	height: 100%;
+	overflow-y: auto;
 	// .page-content__container
 
 	&__container {

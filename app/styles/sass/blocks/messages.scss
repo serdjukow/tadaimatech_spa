@@ -1,29 +1,45 @@
-//
-
 .message {
 	position: relative;
-	padding: calc($index * 1);
+	padding: calc($index * 0.5) calc($index * 1);
 
 	// .message__body
 
 	&__body {
-		display: flex;
-		align-items: center;
+		//display: flex;
+		//justify-content: space-around;
 		width: 100%;
+		height: 100%;
+	}
+
+	// .message__container
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: 1fr auto;
+		column-gap: calc($index * 1.33);
+		row-gap: calc($index * 0.5);
+		font-size: calc($index * 0.6);
 		height: 100%;
 	}
 
 	// .message__content
 
 	&__content {
-		display: flex;
-		align-items: center;
-		gap: calc($index * 3.17);
-		font-size: calc($index * .6);
+		align-self: center;
+		color: rgba($white, 0.75);
+		h3 {
+			font-weight: 700;
+			font-size: calc($index * 0.66);
+			line-height: 1.2;
+			margin-bottom: calc($index * 0.33);
+		}
 		p {
 			font-weight: 300;
 			line-height: 1.2;
-			color: rgba(#f5f5f5, 0.75);
+			font-size: calc($index * 0.53);
+			line-height: 1.2;
+			margin: 0;
 		}
 		span {
 			display: block;
@@ -34,28 +50,169 @@
 	// .message__buttons
 
 	&__buttons {
+		justify-self: stretch;
+		align-self: center;
 	}
+
+	// .message__button
+
+	&__button {
+	}
+
+	&__track {
+		grid-column: 1 / 3;
+	}
+
+	&__footer {
+		grid-column: 1 / 3;
+		align-self: end;
+		font-weight: 500;
+		font-size: calc($index * 0.53);
+		line-height: 1.2;
+		text-align: center;
+		color: rgba($white, 0.5);
+		border-top: 1px solid rgba(#d9d9d9, 0.15);
+		padding-top: calc($index * 0.33);
+	}
+
+	&__link {
+		color: rgba($white, 0.5);
+		text-decoration: none;
+		white-space: nowrap;
+		transition: color 0.25s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgba($white, 0.75);
+			}
+		}
+	}
+
+	// .message__timer
+
+	&__timer {
+		grid-column: 1 / 3;
+	}
+
 }
-.bg-grey {
+.contact-us {
 }
-.contact--us {
-}
-.button {	
-	padding: calc($index * .5) calc($index * 1.16);
+
+.button {
+	padding: calc($index * 0.5) calc($index * 1.55);
 	white-space: nowrap;
 	font-weight: 500;
-	font-size: calc($index * .535);
+	font-size: calc($index * 0.535);
 	line-height: 1.2;
 	text-align: center;
 	text-transform: uppercase;
 	color: #8e8e8e;
 	background-color: $button-bg;
 	border: none;
+	appearance: none;
 	user-select: none;
-	transition: background-color .25s ease;
-	@media(any-hover: hover) {
+	transition: background-color 0.25s ease;
+	@media (any-hover: hover) {
 		&:hover {
 			background-color: darken($button-bg, 3%);
 		}
 	}
 }
+
+.message-timer {
+	display: flex;
+	align-items: center;
+
+	// .message-timer__time
+
+	&__time {
+		font-family: noto-sans-tm;
+		font-weight: 300;
+		font-size: calc($index * 0.6);
+		line-height: 1.3;
+		color: rgba($white, 0.75);
+		margin-right: 19px;
+	}
+
+	// .message-timer__track
+
+	&__track {
+		position: relative;
+		height: 2px;
+		background-color: #404040;
+		width: 100%;
+		overflow: hidden;
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #c4c4c4;
+			transition: width 2s ease;
+		}
+	}
+}
+
+.assistant-message {
+	max-width: calc($index * 16);
+	margin: 0 auto;
+	
+	// .assistant-message__content
+
+	&__content {
+		@extend .message__content;
+		grid-column: 1 / 3;
+		display: flex;
+		align-items: center;		
+		h3 {
+			margin-bottom: 0;			
+		}
+		
+	}
+
+	// .assistant-message__img
+
+	&__img {
+		flex: 1 0 calc($index * 4.46);
+		width: calc($index * 4.46);
+		height: calc($index * 4.46);
+		margin-right: calc($index * 1);
+		border: calc($index * .06) solid #424242;
+		padding: calc($index * .23);
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	// .assistant-message__text
+
+	&__text {
+		& > *:nth-child(1) {
+			margin-bottom: calc($index * 0.43);
+		}
+	}
+
+	// .assistant-message__buttons
+
+	&__buttons {
+		grid-column: 1 / 3;
+		margin-bottom: calc($index * 0.5);
+		display: flex;
+		gap: calc($index * 0.43);
+	}
+
+	// .assistant-message__button
+
+	&__button {
+		min-width: calc($index * 7.66);
+		padding: calc($index * 0.5) calc($index * .5);
+	}
+}
+.button {
+}
+
