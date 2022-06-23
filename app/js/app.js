@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				prevEl: ".swiper-button-prev",
 			},
 			thumbs: {
-				swiper: sliderServicesLogo,
+				swiper: sliderCasesLogo,
 			},
 		});
 	};
@@ -770,14 +770,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		pageBody.innerHTML = "";
 		pageBody.innerHTML = `
 		команда
-		`;
-	}
-
-	function casesToHtml() {
-		const pageBody = document.querySelector(".page-content");
-		pageBody.innerHTML = "";
-		pageBody.innerHTML = `
-		кейсы
 		`;
 	}
 
