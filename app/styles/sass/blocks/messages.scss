@@ -144,12 +144,25 @@
 		span {
 			position: absolute;
 			top: 0;
-			left: 0;
-			width: 0;
+			left: 0;			
 			height: 100%;
 			background-color: #c4c4c4;
 			transition: width 2s ease;
+			animation: message-timer-load 10s linear;
+			animation-iteration-count: 1;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
 		}
+	}
+}
+
+
+@keyframes message-timer-load  {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
 	}
 }
 

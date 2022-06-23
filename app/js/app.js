@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	
+
 	function acquaintanceFormNameToHtml() {
 		const gameBody = document.querySelector(".game__body");
 		gameBody.innerHTML = "";
@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	
 
 	function acquaintanceFormRoleToHtml() {
 		const gameBody = document.querySelector(".game__body");
@@ -195,7 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	
 
 	function settingsToHtml() {
 		const gameBody = document.querySelector(".game__body");
@@ -366,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	settingsToHtml()
+	settingsToHtml();
 
 	const sliderServices = () => {
 		function servicesToHtml() {
@@ -522,15 +520,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		</div>
 			`;
 		}
-		servicesToHtml()
-	
+		servicesToHtml();
+
 		const sliderServicesLogo = new Swiper(".slider-services-logo", {
 			loop: false,
-					slidesPerView: 1,
-					freeMode: true,
-					watchSlidesProgress: true,
+			slidesPerView: 1,
+			freeMode: true,
+			watchSlidesProgress: true,
 		});
-	
+
 		const sliderServices = new Swiper(".slider-services", {
 			modules: [Navigation, Thumbs],
 			loop: false,
@@ -541,10 +539,98 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 			thumbs: {
 				swiper: sliderServicesLogo,
-			}
+			},
 		});
 	};
+
+	const sliderCases = () => {
+		function casesToHtml() {
+			const pageBody = document.querySelector(".page-content");
+			pageBody.innerHTML = "";
+			pageBody.innerHTML = `
+			<div class="page-content__container block-cases">
+			<div class="page-content__title page-title">
+				<h2>Наши кейсы</h2>
+			</div>
+			<!-- Slider main container -->
+			<div class="swiper slider-cases">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+
+					<!-- Slides -->
+
+					<div class="swiper-slide slider-cases__slide">
+						<div class="slider-cases__video">
+							<video controls="controls" poster="video/duel.jpg" autoplay loop muted>
+							<source src="images/dist/video-bg.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="slider-cases__title">
+							<h3>Решения виртуальной и дополненной реальности
+							</h3>
+							<p>
+							Промо приложение электрической щетки IQ для Oral-B с технологией дополненной реальности.
+							</p>
+						</div>
+					</div>
+
+					<!--/  Slides -->
+
+				</div>
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
 	
+			<div thumbsSlider="" class="swiper slider-cases-logo">
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide slider-cases-logo__slide">
+						<div class="slider-cases-logo__items">
+							<div class="slider-cases-logo__item">
+								<img src="images/dist/slider/slider-icons/unreal.svg" />
+							</div>
+							<div class="slider-cases-logo__item">
+								<img src="images/dist/slider/slider-icons/swift.svg" />
+							</div>
+							<div class="slider-cases-logo__item">
+								<img src="images/dist/slider/slider-icons/unity.svg" />
+							</div>
+							<div class="slider-cases-logo__item">
+								<img src="images/dist/slider/slider-icons/blockchain.svg" />
+							</div>
+							<div class="slider-cases-logo__item">
+								<img src="images/dist/slider/slider-icons/kotlin.svg" />
+							</div>
+						</div>
+					</div>
+					<!--/  Slides -->
+				</div>
+			</div>
+		</div>
+			`;
+		}
+		casesToHtml();
+
+		const sliderCasesLogo = new Swiper(".slider-cases-logo", {
+			loop: false,
+			slidesPerView: 1,
+			freeMode: true,
+			watchSlidesProgress: true,
+		});
+
+		const sliderCases = new Swiper(".slider-cases", {
+			modules: [Navigation, Thumbs],
+			loop: false,
+			slidesPerView: 1,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			thumbs: {
+				swiper: sliderServicesLogo,
+			},
+		});
+	};
 
 	function contactUsMessage() {
 		const gameBody = document.querySelector(".message__body");
@@ -654,7 +740,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	assistantMessage()
+	assistantMessage();
 	function startContentToHtml() {
 		const pageBody = document.querySelector(".page-content");
 		pageBody.innerHTML = "";
@@ -670,7 +756,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	 	</div>
 		`;
 	}
-	
 
 	function aboutUsToHtml() {
 		const pageBody = document.querySelector(".page-content");
@@ -678,7 +763,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		pageBody.innerHTML = `
 			о нас
 		`;
-	}	
+	}
 
 	function teamToHtml() {
 		const pageBody = document.querySelector(".page-content");
@@ -936,12 +1021,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		`;
 	}
 
-
 	const currentPageToHTML = () => {
 		sessionStorage.getItem("menuButton")
 			? pageContent(sessionStorage.getItem("menuButton"))
 			: startContentToHtml() & preloaderToHtml();
-		
 	};
 	currentPageToHTML();
 
@@ -956,13 +1039,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 	navigation();
-	
+
 	function pageContent(page) {
-		page === "главная" && startContentToHtml() & preloaderToHtml() & menuLinkMessage() &  messageTimer();
+		page === "главная" &&
+			startContentToHtml() &
+				preloaderToHtml() &
+				menuLinkMessage() &
+				messageTimer();
 		page === "о нас" && aboutUsToHtml() & settingsToHtml() & contactUsMessage();
 		page === "услуги" && sliderServices() & acquaintanceToHtml();
 		page === "команда" && teamToHtml() & acquaintanceFormNameToHtml();
-		page === "кейсы" && casesToHtml() & settingsToHtml() & cookieMessage() & messageTimer();
+		page === "кейсы" &&
+			sliderCases() & settingsToHtml() & cookieMessage() & messageTimer();
 		page === "контакты" &&
 			contactsToHtml() & settingsToHtml() & menuLinkMessage() & messageTimer();
 		page === "принципы работы" &&
@@ -981,7 +1069,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		let timerShow = document.getElementById("timer");
 		let timeMinut = 0;
-		let duration = 30;
+		let duration = 10;
 
 		const timer = setInterval(function () {
 			let seconds = timeMinut % 60;
@@ -995,13 +1083,12 @@ document.addEventListener("DOMContentLoaded", () => {
 					seconds < 10 ? "0" + seconds : seconds
 				}`;
 				timerShow.innerHTML = strTimer;
-				trackWidth += (messageTimerTrack.offsetWidth * seconds) / duration;
-				messageTimerSpan.style.width = trackWidth + "px";
+				// trackWidth += (messageTimerTrack.offsetWidth * seconds) / duration;
+				// messageTimerSpan.style.width = trackWidth + "px";
 			}
 			++timeMinut;
 		}, 1000);
 	}
-	
 });
 
 //JSON.parse(localStorage.getItem('goods'))
