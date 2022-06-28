@@ -1,9 +1,15 @@
 .block-cases {
 	position: relative;
 	overflow-x: hidden;
-	max-width: calc($index * 32);
-	margin: 0 auto;
+	// max-width: calc($index * 32);
+	// margin: 0 auto;
 	padding-top: calc($index * 0.5);
+
+	&__container {
+		position: relative;
+		max-width: calc($index * 32);
+		margin: 0 auto;
+	}
 
 	.swiper-button-prev,
 	.swiper-button-next {
@@ -12,7 +18,7 @@
 		background-color: $black;
 		border: 1px solid $button-bg;
 		transition: background-color 0.25s ease;
-		top: calc($index * 13);
+		top: calc($index * 7);
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: lighten($black, 5%);

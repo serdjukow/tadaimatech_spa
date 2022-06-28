@@ -3,54 +3,60 @@
 
 <div class="wrapper">
 	<header class="header">
-		<nav class="header-navigation navigation bg-grey">
-			<div class="menu-menu-container">
-				<ul class="menu">
-					<li class="menu-item">
-						<a href="#">Главная</a>
-					</li>
-					<li class="menu-item current-menu-item">
-						<a href="#">О нас</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">Услуги</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">Команда</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">Кейсы</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">Контакты</a>
-					</li>
-					<li class="menu-item">
-						<a href="#">Принципы работы</a>
-					</li>
-				</ul>
-			</div>
-			<div class="menu-game">
-				<div class="menu-game__title">Игра</div>
-				<ul class="menu-game__items">
-					<li class="menu-game__item">
-						<a href="#">Начать заново</a>
-					</li>
-					<li class="menu-game__item">
-						<a href="#">Маркетплейс</a>
-					</li>
-				</ul>
-			</div>
-			<div class="navigation__links stores">
-				<a href="#" class="stores__link">
-					<img src="images/dist/google-play.png" alt="google-play" />
-				</a>
-				<a href="#" class="stores__link">
-					<img src="images/dist/app-store.png" alt="app-store" />
-				</a>
-			</div>
-		</nav>
-		<div class="header__left">
-			<div class="header__left-game game bg-grey">
+		<div class=" header-navigation navigation bg-grey">
+			<nav class="navigation__block-scroll">
+				<div class="menu-menu-container">
+					<ul class="menu">
+						<li data-menu="home" class="menu-item home">
+							<a href="#">Главная</a>
+						</li>
+						<li
+							data-menu="about-us"
+							class="menu-item about-us current-menu-item"
+						>
+							<a href="#">О нас</a>
+						</li>
+						<li data-menu="services" class="menu-item services">
+							<a href="#">Услуги</a>
+						</li>
+						<li data-menu="team" class="menu-item team">
+							<a href="#">Команда</a>
+						</li>
+						<li data-menu="cases" class="menu-item cases">
+							<a href="#">Кейсы</a>
+						</li>
+						<li data-menu="contacts" class="menu-item contacts">
+							<a href="#">Контакты</a>
+						</li>
+						<li data-menu="principles" class="menu-item principles">
+							<a href="#">Принципы работы</a>
+						</li>
+					</ul>
+				</div>
+				<div class="menu-game">
+					<div data-menu="game" class="menu-game__title icon-game">Игра</div>
+					<ul class="menu-game__items">
+						<li data-menu="restart" class="menu-game__item">
+							<a href="#">Начать заново</a>
+						</li>
+						<li data-menu="marketplace" class="menu-game__item">
+							<a href="#">Маркетплейс</a>
+						</li>
+					</ul>
+				</div>
+				<div class="navigation__links stores">
+					<a data-menu="google-play" href="#" class="stores__link">
+						<img src="images/dist/google-play.png" alt="google-play" />
+					</a>
+					<a data-menu="app-store" href="#" class="stores__link">
+						<img src="images/dist/app-store.png" alt="app-store" />
+					</a>
+				</div>
+			</nav>
+		</div>
+
+		<div class="header__left bg-grey">
+			<div class="header__left-game game">
 				<div class="game__body"></div>
 			</div>
 			<div class="message bg-grey">
@@ -59,7 +65,27 @@
 		</div>
 
 		<div class="header__right">
+			<div class="settings-panel-left bg-grey">
+				<div class="settings-panel-left__bonus">
+				</div>
+				<div class="panel-settings__icons">
+					<div class="panel-settings__icon"></div>
+					<div class="panel-settings__icon"></div>
+					<div class="panel-settings__icon"></div>
+					<div class="panel-settings__icon"></div>
+					<div class="panel-settings__icon"></div>
+					<div class="panel-settings__icon"></div>
+				</div>
+			</div>
 			<div class="header__right-top">
+				<div id="settings-burger" class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<div class="header__right-top-banner banner bg-grey">
 					<p>
 						27.09.2022 года, компания ТАДАИМАТЕК приглашает на технологичесукю
@@ -67,7 +93,7 @@
 					</p>
 				</div>
 
-				<div id="nav-icon">
+				<div id="nav-burger" class="burger">
 					<span></span>
 					<span></span>
 					<span></span>

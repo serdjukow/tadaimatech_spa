@@ -1,0 +1,138 @@
+.page-content {
+	// .page-content__container
+
+	&__container {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	// .page-content__title
+
+	&__title {
+	}
+}
+.block-principles {
+	// .block-principles__row
+
+	&__row {
+		display: grid;
+		grid-template-columns: calc($index * 9) 1fr;
+		gap: calc($index * 5.33);
+	}
+
+	// .block-principles__menu
+
+	&__menu {
+		list-style: none;
+		margin: calc($index * 1) 0 0;
+		padding: 0;
+	}
+
+	// .block-principles__menu-item
+
+	&__menu-item {
+		display: flex;
+		font-weight: 600;
+		font-size: calc($index * 0.66);
+		line-height: 1.3;
+		text-transform: uppercase;
+		color: rgba($white, 0.25);
+		transition:  0.25s ease;		
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-bottom: calc($index * 1.16);
+		}
+		&::before {
+			content: '';
+			flex: 0 0 calc($index * 0.26);
+			display: inline-block;
+			height: calc($index * 0.5);
+			margin-top: calc($index * 0.13);
+			background-image: url(../images/dist/icons/arrow-2.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			opacity:0;
+			transition: 0.25s ease;			
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgba($white, 0.75);
+			}
+		}
+		&._active {
+			color: rgba($white, 0.75);
+			&::before {
+				opacity: 1;
+				margin-right: calc($index * 0.5);
+				transition: 0.25s ease;
+			}
+		}
+
+	}
+
+	// .block-principles__content
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr calc($index * 19);
+		gap: calc($index * 5.83);
+	}
+
+	// .block-principles__content-items
+
+	&__content-items {
+		counter-reset: block-principles__content-items;
+	}
+
+	// .block-principles__content-item
+
+	&__content-item {
+		position: relative;
+		padding-top: calc($index * 2);
+		&:not(:last-child) {
+			margin-bottom: calc($index * 0.83);
+		}
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: counter(block-principles__content-items);
+			counter-increment: block-principles__content-items;
+			font-family: noto-sans-tm;
+			font-weight: 600;
+			font-size: calc($index * 2.4);
+			line-height: 1.3;
+			text-transform: uppercase;
+			color: rgba($white, 0.05);
+		}
+		p {
+			font-weight: 300;
+			font-size: calc($index * 0.66);
+			line-height: 1.3;
+			color: rgba($white, 0.5);
+			transition: color 0.25s ease;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				p {
+					color: rgba($white, 1);
+				}
+			}
+		}
+	}
+
+	// .block-principles__content-photo
+
+	&__content-photo {
+		overflow: hidden;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.page-title {
+}

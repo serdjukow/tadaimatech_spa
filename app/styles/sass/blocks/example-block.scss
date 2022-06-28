@@ -6,11 +6,24 @@
 	gap: calc($index * 0.34);
 	height: 100vh;
 	&__left {
-		flex: 0 1 36.5%;
+		position:absolute;
+		top: calc($index * .33 );
+		left: -100%;
+		bottom: calc($index * .33 );
+		max-width: calc($index * 23);
+		padding-top: calc($index * 1.6);
 		display: flex;
 		flex-direction: column;
 		gap: calc($index * 0.34);
+		overflow-y:auto;
+		transition: left .4s ease;
+		z-index: 100;
 	}
+
+	&__left._active {
+		left: 0;
+	}
+
 	&__right {
 		flex: 1 1 auto;
 		display: flex;
@@ -24,7 +37,7 @@
 	position: relative;
 	width: 100%;
 	flex: 1 1 auto;
-	padding: calc($index * .7) calc($index * 1);
+	padding: calc($index * .7) calc($index * .7);
 	&__body {
 		position: relative;
 		min-height: 100%;
@@ -50,6 +63,7 @@
 	min-height: calc($index * 1.7);
 	overflow: hidden;
 	padding: 0;
+	margin-right: calc($index * 0.33);
 	p {
 		font-size: calc($index * 0.67);
 		position: absolute;
@@ -79,12 +93,19 @@
 }
 
 .page-content {
-	flex: 1 1 auto;
-	// .page-content__start-block
+	// .page-content__container
 
-	&__start-block {
+	&__container {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	// .page-content__title
+
+	&__title {
 	}
 }
+
 .start-block {
 	display: flex;
 	flex-direction: column;
@@ -170,6 +191,8 @@
 	justify-content: center;
 	padding: calc($index * 0.5);
 	overflow: hidden;
+	margin-right: calc($index * 2.33);
+	margin-left: calc($index * 2.33);
 	p {
 		font-weight: 400;
 		font-size: calc($index * 0.67);

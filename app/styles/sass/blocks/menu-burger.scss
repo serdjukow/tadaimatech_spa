@@ -1,8 +1,8 @@
-#nav-icon {
+.burger {
 	display: block;
 	width: calc($index * 1.335);
 	height: calc($index * 1);
-	margin-right: calc($index * .5);
+	margin-right: calc($index * .15);
 	position: relative;
 	transform: rotate(0deg);
 	transition: 0.5s ease-in-out;
@@ -10,7 +10,7 @@
 	z-index: 100;
 }
 
-#nav-icon span {
+.burger span {
 	display: block;
 	position: absolute;
 	height: calc($index * .1);
@@ -21,70 +21,70 @@
 	transition: 0.25s ease-in-out;
 }
 
-#nav-icon span:nth-child(even) {
+.burger span:nth-child(even) {
 	left: 50%;
 	border-radius: 0 9px 9px 0;
 }
 
-#nav-icon span:nth-child(odd) {
+.burger span:nth-child(odd) {
 	left: 0px;
 	border-radius: 9px 0 0 9px;
 }
 
-#nav-icon span:nth-child(1),
-#nav-icon span:nth-child(2) {
+.burger span:nth-child(1),
+.burger span:nth-child(2) {
 	top: 0px;
 }
 
-#nav-icon span:nth-child(3),
-#nav-icon span:nth-child(4) {
+.burger span:nth-child(3),
+.burger span:nth-child(4) {
 	top: 50%;
 	transform: rotate(0deg) translateY(-50%);
 }
 
-#nav-icon span:nth-child(3) {
+.burger span:nth-child(3) {
 	left: 0;
 }
 
-#nav-icon span:nth-child(5),
-#nav-icon span:nth-child(6) {
+.burger span:nth-child(5),
+.burger span:nth-child(6) {
 	bottom: 0;
 }
 
-#nav-icon._active span:nth-child(1),
-#nav-icon._active span:nth-child(6) {
+.burger._active span:nth-child(1),
+.burger._active span:nth-child(6) {
 	transform: rotate(45deg);
 }
 
-#nav-icon._active span:nth-child(2),
-#nav-icon._active span:nth-child(5) {
+.burger._active span:nth-child(2),
+.burger._active span:nth-child(5) {
 	transform: rotate(-45deg);
 }
 
-#nav-icon._active span:nth-child(1) {
+.burger._active span:nth-child(1) {
 	top: calc($index * .3668);
 }
 
-#nav-icon._active span:nth-child(2) {
+.burger._active span:nth-child(2) {
 	top: calc($index * .3668);
 	left: calc(36%);
 }
 
-#nav-icon._active span:nth-child(3) {
+.burger._active span:nth-child(3) {
 	left: -50%;
 	opacity: 0;
 }
 
-#nav-icon._active span:nth-child(4) {
+.burger._active span:nth-child(4) {
 	left: 100%;
 	opacity: 0;
 }
 
-#nav-icon._active span:nth-child(5) {
+.burger._active span:nth-child(5) {
 //	top: calc($index * .7);
 }
 
-#nav-icon._active span:nth-child(6) {
+.burger._active span:nth-child(6) {
 	left: calc(36%);
 	//top: calc($index * .7);
 }

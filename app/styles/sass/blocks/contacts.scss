@@ -1,24 +1,37 @@
 .block-contacts {
-	padding-top: calc($index * .3);
-	max-width: calc($index * 32);
-	margin: 0 auto;
+	// padding-top: calc($index * .3);
+	// max-width: calc($index * 32);
+	// margin: 0 auto;
 	// .block-contacts__row
 
 	&__row {
 		display: grid;
-		grid-template-columns: calc($index * 16) 1fr;
+		grid-template-columns: calc($index * 28) 1fr;
 		gap: calc($index * 1.33);
+		max-width: calc($index * 43);
+		margin: 0 auto;
 	}
 
 	// .block-contacts__map
 
 	&__map {
-		max-height: calc($index * 22);
-		img {
+		position: relative;
+		//max-height: calc($index * 22);
+		img,
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
 			display: block;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			
+		}
+		iframe {
+			
+    		filter: grayscale(100%) invert(1);
+			-webkit-filter: grayscale(100%) invert(1);
 		}
 	}
 
@@ -72,7 +85,7 @@
 	}
 
 	form {
-		margin-bottom: calc($index * 1.8);
+		margin-bottom: calc($index * 2);
 	}
 
 	&__button {
@@ -89,14 +102,15 @@
 .form-info {
 	font-weight: 300;
 	font-size: calc($index * .6);
-	line-height: 1.3;
+	line-height: 1.4;
 	color: rgba($white, 0.75);
 	& > * {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		margin-bottom: calc($index * .4);
 	}
 	& > *::before {
+		flex: 0 0 calc($index * 1.23);
 		content: '';
 		display: block;
 		width: calc($index * 1.23);
@@ -114,6 +128,9 @@
 		&::before {
 			background-size: calc($index * .46);
 			background-image: url(../images/dist/icons/address.svg);
+		}
+		span {
+			font-family: noto-sans-tm;
 		}
 	}
 

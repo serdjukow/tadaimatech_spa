@@ -25,28 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	currentDate();
 
-	const menu = () => {
-		const menuButton = document.querySelector("#nav-icon");
-		const navigation = document.querySelector(".navigation");
-		const body = document.querySelector("body");
-		const bodyOverlay = document.querySelector(".body-overlay");
 
-		document.addEventListener("click", (e) => {
-			let el = e.target;
-			el.closest("#nav-icon") && toggleNavActive();
-			el.closest(".menu-item") && toggleNavActive();
-			el.closest(".body-overlay") && toggleNavActive();
-			el.closest(".menu-game__item") && toggleNavActive();
-		});
-
-		const toggleNavActive = () => {
-			menuButton.classList.toggle("_active");
-			navigation.classList.toggle("_active");
-			body.classList.toggle("_lock");
-			bodyOverlay.classList.toggle("_active");
-		};
-	};
-	menu();
 
 	function preloaderToHtml() {
 		const gameBody = document.querySelector(".game__body");
@@ -364,8 +343,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	settingsToHtml();
-
+	settingsToHtml()
+	
 	const sliderServices = () => {
 		function servicesToHtml() {
 			const pageBody = document.querySelector(".page-content");
@@ -375,6 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			<div class="page-content__title page-title">
 				<h2>Мы разрабатываем</h2>
 			</div>
+			<div class="block-services__container">
 			<!-- Slider main container -->
 			<div class="swiper slider-services">
 				<!-- Additional required wrapper -->
@@ -517,6 +497,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					<!--/  Slides -->
 				</div>
 			</div>
+			</div>
+
 		</div>
 			`;
 		}
@@ -556,6 +538,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					решений, которые могут усилить Ваш бизнес.
 				</p>
 			</div>
+			<div class="block-cases__container">
 			<!-- Slider main container -->
 			<div class="swiper slider-cases">
 				<!-- Additional required wrapper -->
@@ -694,6 +677,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					<!--/  Slides -->
 				</div>
 			</div>
+			</div>
+	
 		</div>
 			`;
 		}
@@ -702,9 +687,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		const sliderCasesLogo = new Swiper(".slider-cases-logo", {
 			loop: false,
 			slidesPerView: 1,
-			freeMode:false,
-			watchSlidesProgress: false
-
+			freeMode: false,
+			watchSlidesProgress: false,
 		});
 
 		const sliderCases = new Swiper(".slider-cases", {
@@ -830,7 +814,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
 		`;
 	}
-	assistantMessage();
+
 	function startContentToHtml() {
 		const pageBody = document.querySelector(".page-content");
 		pageBody.innerHTML = "";
@@ -851,7 +835,56 @@ document.addEventListener("DOMContentLoaded", () => {
 		const pageBody = document.querySelector(".page-content");
 		pageBody.innerHTML = "";
 		pageBody.innerHTML = `
-			о нас
+		<div class="page-content__container block-about-us">
+
+		<div class="block-about-us__title">
+			<div class="block-about-us__logo">
+				<div class="block-about-us__logo-img">
+					<img src="images/dist/logo.png" alt="logo">
+				</div>
+				<div class="block-about-us__logo-text">
+					TADAIMATECH
+				</div>
+			</div>
+			<div class="block-about-us__title-text">
+				Спутник цифровых трансформаций Вашего бизнеса!
+			</div>
+		</div>
+		<div class="block-about-us__row">
+			<div class="block-about-us__content">
+				<div class="block-about-us__item">
+					<div class="block-about-us__item-img">
+						<img src="images/dist/about-us.png" alt="about-us">
+					</div>
+					<p class="block-about-us__item-text">Мы — команда из 35 профессионалов в области разработки цифровых решений для бизнеса.</p>
+				</div>
+				<div class="block-about-us__item">
+					<div class="block-about-us__item-img">
+						<img src="images/dist/mission.png" alt="about-us">
+					</div>
+					<p class="block-about-us__item-text">Мы помогаем бизнесу и государственным организациям эффективно выстроить работу и коммуникации в цифровую эпоху.</p>
+				</div>
+			</div>
+			<div class="block-about-us__contact">
+				<div class="block-about-us__contact-img">
+					<img src="images/dist/assistant.png" alt="assistant">
+				</div>
+				<p class="block-about-us__contact-subtitle">
+					Ваш личный помощник в разработке решения для Вашего бизнеса:
+				</p>
+				<div class="block-about-us__contact-title">
+					<h4>
+						Леонид Орещенко	
+					</h4>
+					<p>Продюсер цифровых решений</p>
+				</div>
+				<div class="block-about-us__contact-buttons">
+					<button class="block-about-us__contact-button button">написать на почту</button>
+					<button class="block-about-us__contact-button button">Написать в telegram</button>
+				</div>
+			</div>
+		</div>
+	</div>
 		`;
 	}
 
@@ -874,7 +907,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			<div class="block-contacts__row">
 				<div class="block-contacts__map">
-					<img src="images/dist/map.png" alt="map" />
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6e7360dce579fbac469e7aeb98a2e2bae4ecc9dce4fd60c8a28a01c2af33cbcd&amp;source=constructor" width="840" height="700" frameborder="0"></iframe>
 				</div>
 				<div class="block-contacts__form contacts-form">
 					<div class="contacts-form__title">
@@ -882,7 +915,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						<p>Заполните фору и мы с Вами свяжемся!</p>
 					</div>
 
-					<form action="">
+					<form>
 						<input placeholder="Ваше имя" />
 						<input placeholder="Ваш e-mail" />
 						<textarea placeholder="Сообщение..."></textarea>
@@ -903,7 +936,34 @@ document.addEventListener("DOMContentLoaded", () => {
 		const pageBody = document.querySelector(".page-content");
 		pageBody.innerHTML = "";
 		pageBody.innerHTML = `
-		принципы работы
+		<div class="page-content__container block-principles">
+		<div class="page-content__title page-title">
+			<h2>Как мы работаем</h2>
+		</div>
+		<div class="block-principles__row">
+			<ul class="block-principles__menu">
+				<li class="block-principles__menu-item _active">
+					Этап Знакомства
+				</li>
+				<li class="block-principles__menu-item">
+					Этап аналитики для крупных проектов
+				</li>
+				<li class="block-principles__menu-item">Этап разработки</li>
+				<li class="block-principles__menu-item">
+					Этап внедрения и сопровождения
+				</li>
+			</ul>
+
+			<div class="block-principles__content">
+				<div class="block-principles__content-items">
+	
+				</div>
+				<div class="block-principles__content-photo">
+					<img src="images/dist/principles/principles-1.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
 		`;
 	}
 
@@ -1103,42 +1163,125 @@ document.addEventListener("DOMContentLoaded", () => {
 		`;
 	}
 
+
+	const menu = () => {
+		const navBurger = document.querySelector("#nav-burger");
+		const navigation = document.querySelector(".navigation");
+		const body = document.querySelector("body");
+		const bodyOverlay = document.querySelector(".body-overlay");
+
+		navBurger.addEventListener("click", (e) => {
+			let el = e.target;					
+			el.closest("._active") ? removeNavActive() : addNavActive();
+		});
+
+		bodyOverlay.addEventListener("click", () => {
+			removeNavActive();
+		});
+
+		const addNavActive = () => {
+			navBurger.classList.add("_active");
+			navigation.classList.add("_active");
+			body.classList.add("_lock");
+			bodyOverlay.classList.add("_active");
+		};
+
+		const removeNavActive = () => {
+			navBurger.classList.remove("_active");
+			navigation.classList.remove("_active");
+			body.classList.remove("_lock");
+			bodyOverlay.classList.remove("_active");
+		};
+	};
+	menu();
+
+
+
+	const menuSettings = () => {
+		const settingsBurger = document.querySelector("#settings-burger");
+		const headerLeft = document.querySelector(".header__left");
+		const body = document.querySelector("body");
+		const bodyOverlay = document.querySelector(".body-overlay");
+
+		document.addEventListener("click", (e) => {
+			let el = e.target;
+			el.closest("#settings-burger") && toggleNavActive();
+		});
+
+		const toggleNavActive = () => {
+			settingsBurger.classList.toggle("_active");
+			headerLeft.classList.toggle("_active");
+		};
+	};
+	menuSettings();
+
 	const currentPageToHTML = () => {
-		sessionStorage.getItem("menuButton")
-			? pageContent(sessionStorage.getItem("menuButton"))
-			: startContentToHtml() & preloaderToHtml();
+		if(sessionStorage.getItem("menuButton")) {
+			pageContent(sessionStorage.getItem("menuButton"))
+			addActiveItem(sessionStorage.getItem("menuButton"))
+		} else {
+			startContentToHtml()
+			addActiveItem('home')
+		}
+		
 	};
 	currentPageToHTML();
 
-	function navigation() {
-		const menu = document.querySelector(".navigation");
+	
 
-		menu.addEventListener("click", (e) => {
-			e.preventDefault();
-			let element = e.target;
-			pageContent(element.textContent.toLowerCase());
-			sessionStorage.setItem("menuButton", element.textContent.toLowerCase());
-		});
+	const changeActiveItem = (indexClickedItem) => {
+		const menuItems = document.querySelectorAll('[data-menu]')
+        menuItems.forEach((item, index) => {
+            item.classList.remove('_active');
+            if (index === indexClickedItem) {
+                item.classList.add('_active')
+            }
+        })        
+    }
+
+	function addActiveItem(dataActiveItem) {
+		const menuItems = document.querySelectorAll('[data-menu]')
+        menuItems.forEach(item => {
+			let dataValue = item.attributes['data-menu'].value	
+            item.classList.remove('_active');
+            if (dataValue === dataActiveItem) {
+                item.classList.add('_active')
+            }
+        })        
+    }
+	
+	function navigation() {
+		const menuItems = document.querySelectorAll('[data-menu]')
+		const navBurger = document.querySelector("#nav-burger");
+		const navigation = document.querySelector(".navigation");
+		const body = document.querySelector("body");
+		const bodyOverlay = document.querySelector(".body-overlay");
+
+		menuItems.forEach((item, index) => {
+			item.addEventListener('click', () => {
+				let dataValue = item.attributes['data-menu'].value		
+				pageContent(dataValue);
+				sessionStorage.setItem("menuButton", dataValue);
+				changeActiveItem(index)
+				navBurger.classList.remove("_active");
+				navigation.classList.remove("_active");
+				body.classList.remove("_lock");
+				bodyOverlay.classList.remove("_active");
+			})
+		})
 	}
 	navigation();
 
 	function pageContent(page) {
-		page === "главная" &&
-			startContentToHtml() &
-				preloaderToHtml() &
-				menuLinkMessage() &
-				messageTimer();
-		page === "о нас" && aboutUsToHtml() & settingsToHtml() & contactUsMessage();
-		page === "услуги" && sliderServices() & acquaintanceToHtml();
-		page === "команда" && teamToHtml() & acquaintanceFormNameToHtml();
-		page === "кейсы" &&
-			sliderCases() & settingsToHtml() & cookieMessage() & messageTimer();
-		page === "контакты" &&
-			contactsToHtml() & settingsToHtml() & menuLinkMessage() & messageTimer();
-		page === "принципы работы" &&
-			principlesOfOperationToHtml() & settingsToHtml();
-		page === "маркетплейс" &&
-			marketplaceToHtml() & settingsToHtml() & assistantMessage();
+		
+		page === "home" && startContentToHtml()				
+		page === "about-us" && aboutUsToHtml()
+		page === "services" && sliderServices()
+		page === "team" && teamToHtml()
+		page === "cases" && sliderCases()
+		page === "contacts" && contactsToHtml()
+		page === "principles" && principlesOfOperationToHtml() & principles()
+		page === "marketplace" && marketplaceToHtml()
 	}
 
 	function messageTimer() {
@@ -1171,6 +1314,123 @@ document.addEventListener("DOMContentLoaded", () => {
 			++timeMinut;
 		}, 1000);
 	}
+
+	function principles () {
+		const tabsOptions = [
+			{
+				articles: [
+					'Знакомство, обсуждение задач, намерений и пожеланий клиента',
+					'Создание рабочей группы проекта и организация трехсторонней встречи',
+					'Готовим персональное решение задач с учетом внутренних процессов',
+					'Подписываем договор о гарантии безопасности коммерческой информации',
+					'Финализируем условия, подписываем договор и приступаем к работе'
+				],
+				image: [
+					'images/dist/principles/principles-1.jpg'
+				]
+			},
+			{
+				articles: [
+					'Анализируем рынок, изучаем конкурентов, внешние и внутренние факторы успеха проекта',
+					'Исследуем  аудитории, фиксируем портреты клиентов и его поведение',
+					'Проводим комплекс интервью с собственниками и ТОП-менеджерами',
+					'Исследуем  аудитории, фиксируем портреты клиентов и его поведение',
+					'Анализируем рынок, изучаем конкурентов, внешние и внутренние факторы успеха проекта'
+				],
+				image: [
+					'images/dist/slider/services-4.jpg'
+				]
+			},
+			{
+				articles: [
+					'Разрабатываем детальное Тех. задание адаптивное для распределенных команд',
+					'Используем актуальные технологии в разработки ПО, применяем блокчейн и нейросети',
+					'Используем  распределенные масштабируемые команды для эффективной и быстрой работы',
+					'Используем в проектах современные технологии безопасности данных',
+					'Во время процесса разработки гибко подходим к изменениям в Тех. задании'
+				],
+				image: [
+					'images/dist/principles/principles-1.jpg'
+				]
+			},
+			{
+				articles: [
+					'Разрабатываем программу обучения и мотивации сотрудников для нового ПО',
+					'Внедряем геймификацию в процесс обучение и тестирования сотрудников',
+					'Дорабатываем цифровое решение работая с обратной связью клиентов и сотрудников',
+					'Проводим консультации по узким местам внедрения и сопровождения',
+					'Всегда находимся рядом с клиентом на всем промежутке использования ПО'
+				],
+				image: [
+					'images/dist/slider/services-4.jpg'
+				]
+			}			
+		]
+
+		
+		function principlesContentItem (item) {
+			return `
+			<div class="block-principles__content-item">
+				<p>
+					${item}
+				</p>
+			</div>
+		`
+		}
+
+		const principlesContentRender = principlesItems => {
+			const blockPrinciplesContentItems = document.querySelector('.block-principles__content-items')
+			blockPrinciplesContentItems.innerHTML = principlesItems.map(principlesContentItem).join('')
+		}
+
+		const principlesImgRender = principlesSrc => {
+			const principlesImg = document.querySelector('.block-principles__content-photo img')
+			principlesImg.src = principlesSrc
+		}
+
+		function principlesContentItems(itemId) {
+			let art = tabsOptions.filter((item, id) => id == itemId)
+			art.forEach(item => {
+				principlesContentRender(item.articles)
+				principlesImgRender(item.image[0])
+			})
+		}
+		principlesContentItems('0')
+
+		const blockPrinciplesMenuItems = document.querySelectorAll('.block-principles__menu-item')
+		if(blockPrinciplesMenuItems) {
+			const changeActiveItem = (indexClickedItem) => {
+				blockPrinciplesMenuItems.forEach((item, index) => {
+					item.classList.remove('_active');
+					if (index === indexClickedItem) {
+						item.classList.add('_active')
+					}
+				})        
+			}
+		
+			function addActiveItem(dataActiveItem) {
+				blockPrinciplesMenuItems.forEach((item, index) => {
+					item.classList.remove('_active');
+					if (index === dataActiveItem) {
+						item.classList.add('_active')
+					}
+				})        
+			}
+			
+
+			function principlesTab() {
+				blockPrinciplesMenuItems.forEach((item, index) => {
+					item.addEventListener('click', () => {
+						sessionStorage.setItem("principlesbutton", index);
+						changeActiveItem(index)
+						principlesContentItems(index)
+					})
+				})
+			}
+			principlesTab()
+		}
+	}
+	
 });
 
 //JSON.parse(localStorage.getItem('goods'))
