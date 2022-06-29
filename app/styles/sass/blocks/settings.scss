@@ -38,6 +38,12 @@
 		display: flex;
 		max-width: 100%;
 		border: 1px solid #424242;
+		transition: border-color 0.25s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid rgba(#fff, 0.5);
+			}
+		}
 	}
 
 	// .progress-block__track
@@ -83,7 +89,6 @@
 			grid-template-columns: repeat(37, 1fr);
 			height: calc($index * 1.47);
 			span {
-				
 				&._active {
 					background-color: #ff3c48;
 				}
@@ -127,8 +132,15 @@
 		justify-content: center;
 		align-items: center;
 		background-color: #424242;
+		border: 1px solid #424242;
 		color: rgba($white, 0.5);
 		padding: calc($index * 0.26);
+		transition: border-color 0.25s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid rgba(#fff, 0.5);
+			}
+		}
 		&::before {
 			content: "";
 			display: block;
@@ -195,8 +207,14 @@
 		height: calc($index * 1.33);
 		border: 1px solid #fff;
 		opacity: 0.25;
+		transition: opacity 0.25s ease;
 		&:not(:last-child) {
 			margin-bottom: calc($index * 1.34);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.5;
+			}
 		}
 		&::before {
 			content: "";
@@ -260,41 +278,46 @@
 
 .settings-panel-left {
 	position: absolute;
-	top: calc($index * .33);
-	bottom: calc($index * .33);
+	top: calc($index * 0.33);
+	bottom: calc($index * 0.33);
 	left: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: calc($index * 2.5) calc($index * .5) calc($index * .33);
+	padding: calc($index * 2.5) calc($index * 0.5) calc($index * 0.33);
 
 	&__bonus {
 		width: calc($index * 1.33);
 		height: calc($index * 1.33);
-		border: 1px solid rgba(#fff, .25);
+		border: 1px solid rgba(#fff, 0.25);
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: calc($index * .93);
+		background-size: calc($index * 0.93);
 		background-image: url(../images/dist/icons/bonus-diamond.png);
 		margin-bottom: calc($index * 3.33);
+		transition: border 0.25s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid rgba(#fff, 0.5);
+			}
+		}
 	}
 }
 .panel-settings {
+	// .panel-settings__bonus
 
-		// .panel-settings__bonus
+	&__bonus {
+	}
 
-		&__bonus {
-		}
+	// .panel-settings__icons
 
-		// .panel-settings__icons
+	&__icons {
+	}
 
-		&__icons {
-		}
+	// .panel-settings__icon
 
-		// .panel-settings__icon
-
-		&__icon {
-		}
+	&__icon {
+	}
 }
 .bonus-block {
 }
