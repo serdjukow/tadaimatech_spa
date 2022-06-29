@@ -14,7 +14,6 @@
 		padding-top: calc($index * 1.6);
 		display: flex;
 		flex-direction: column;
-		gap: calc($index * 0.34);
 		overflow-y:auto;
 		transition: left .4s ease;
 		z-index: 100;
@@ -38,6 +37,8 @@
 	width: 100%;
 	flex: 1 1 auto;
 	padding: calc($index * .7) calc($index * .7);
+	
+	border-bottom: calc($index * 0.34) solid  #2c2c2c;
 	&__body {
 		position: relative;
 		min-height: 100%;
@@ -50,7 +51,7 @@
 
 .header__right-top {
 	display: flex;
-	gap: calc($index * 0.5);
+	gap: calc($index * .9);
 	align-items: center;
 }
 
@@ -63,7 +64,6 @@
 	min-height: calc($index * 1.7);
 	overflow: hidden;
 	padding: 0;
-	margin-right: calc($index * 0.33);
 	p {
 		font-size: calc($index * 0.67);
 		position: absolute;
@@ -98,6 +98,8 @@
 	&__container {
 		max-width: 90%;
 		margin: 0 auto;
+		height: calc(100% - 60px);
+		height: 100%;
 	}
 
 	// .page-content__title
@@ -110,6 +112,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	height: 100%;
 	padding: calc($index * 0.34);
 	// .start-block__title
@@ -130,7 +133,7 @@
 	}
 
 	&__title {
-		margin-bottom: calc($index * .5);
+		margin-bottom: calc($index * .8);
 		h1 {
 			font-family: $titlefont;
 			font-weight: 100;
@@ -148,6 +151,9 @@
 			max-width: calc($index * 20);
 			margin: 0 auto;
 		}
+	}
+	&__button {
+
 	}
 }
 

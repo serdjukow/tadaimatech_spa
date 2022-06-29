@@ -16,17 +16,18 @@
 		width: calc($index * 1.03);
 		height: calc($index * 1.46);
 		background-color: $black;
-		border: 1px solid $button-bg;
-		transition: background-color 0.25s ease;
+		border: 1px solid #8f8f8f;
+		transition: background-color 0.25s ease,  border 0.25s ease;
 		top: calc($index * 7);
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: lighten($black, 5%);
+				border: 1px solid lighten(#8f8f8f, 5%);
 			}
 		}
 		&::after {
 			color: #f5f5f5;
-			font-size: calc($index * 0.36);
+			font-size: calc($index * 0.6);
 		}
 	}
 

@@ -266,7 +266,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: calc($index * 2.5) calc($index * .33) calc($index * .33);
+	padding: calc($index * 2.5) calc($index * .5) calc($index * .33);
 
 	&__bonus {
 		width: calc($index * 1.33);

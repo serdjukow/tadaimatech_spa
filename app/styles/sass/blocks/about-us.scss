@@ -1,4 +1,5 @@
 .block-about-us {
+    position: relative;
     padding-top: calc($index * 1.5);
     // .block-about-us__title
 
@@ -52,15 +53,19 @@
 
      &__row {
          display: grid;
-         grid-template-columns: 1fr calc($index * 17);
+         grid-template-columns: 1fr calc($index * 17);        
          gap: calc($index * 5.33);
-         padding: calc($index * 3.33);
+         padding: calc($index * 4.33) calc($index * 3.33) calc($index * 3.33);
+         height: calc(100% - $index * 2.1);
+         //display: flex;
+         //align-items: center;
 
     }
 
     // .block-about-us__content
 
     &__content {
+        //flex: 1 1 auto;
     }
 
     // .block-about-us__item
@@ -98,6 +103,7 @@
     // .block-about-us__contact
 
     &__contact {
+        //flex: 0 0 calc($index * 17);
         font-weight: 300;
         font-size: calc($index * .6);
         line-height: 1.3;
