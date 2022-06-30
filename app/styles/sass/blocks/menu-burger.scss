@@ -1,7 +1,7 @@
 .burger {
 	display: block;
-	width: calc($index * 1.335);
-	height: calc($index * 1);	
+	width: calc($index * 1.335 * $coaficent-sm);
+	height: calc($index * 1 * $coaficent-sm);	
 	position: relative;
 	transform: rotate(0deg);
 	transition: 0.5s ease-in-out;
@@ -10,22 +10,58 @@
 }
 
 .settings-burger {
-	margin-left: calc($index * .15);
+	margin-left: calc($index * .15 * $coaficent-sm);
 }
 
 .nav-burger {
-	margin-right: calc($index * .15);
+	margin-right: calc($index * .15 * $coaficent-sm);
 }
 
 .burger span {
 	display: block;
 	position: absolute;
-	height: calc($index * .1);
+	height: calc($index * .1 * $coaficent-sm);
 	width: 50%;
 	background: #fff;
 	opacity: 1;
 	transform: rotate(0deg);
 	transition: 0.25s ease-in-out;
+}
+@include media-breakpoint-up(sm) {
+	.burger {
+		width: calc($index * 1.335 * $coaficent-md);
+		height: calc($index * 1 * $coaficent-md);	
+	}
+	
+	.settings-burger {
+		margin-left: calc($index * .15 * $coaficent-md);
+	}
+	
+	.nav-burger {
+		margin-right: calc($index * .15 * $coaficent-md);
+	}
+	
+	.burger span {
+		height: calc($index * .1 * $coaficent-md);
+	}
+}
+@include media-breakpoint-up(lg) {
+	.burger {
+		width: calc($index * 1.335);
+		height: calc($index * 1);	
+	}
+	
+	.settings-burger {
+		margin-left: calc($index * .15);
+	}
+	
+	.nav-burger {
+		margin-right: calc($index * .15);
+	}
+	
+	.burger span {
+		height: calc($index * .1);
+	}
 }
 
 .burger span:nth-child(even) {

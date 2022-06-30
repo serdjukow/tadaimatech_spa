@@ -277,28 +277,33 @@
 }
 
 .settings-panel-left {
-	position: absolute;
-	top: calc($index * 0.33);
-	bottom: calc($index * 0.33);
-	left: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: calc($index * 2.5) calc($index * 0.5) calc($index * 0.33);
-
-	&__bonus {
-		width: calc($index * 1.33);
-		height: calc($index * 1.33);
-		border: 1px solid rgba(#fff, 0.25);
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: calc($index * 0.93);
-		background-image: url(../images/dist/icons/bonus-diamond.png);
-		margin-bottom: calc($index * 3.33);
-		transition: border 0.25s ease;
-		@media (any-hover: hover) {
-			&:hover {
-				border: 1px solid rgba(#fff, 0.5);
+display: none;
+}
+@include media-breakpoint-up(lg) {
+	.settings-panel-left {
+		position: absolute;
+		top: calc($index * 0.33);
+		bottom: calc($index * 0.33);
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: calc($index * 2.5) calc($index * 0.5) calc($index * 0.33);
+	
+		&__bonus {
+			width: calc($index * 1.33);
+			height: calc($index * 1.33);
+			border: 1px solid rgba(#fff, 0.25);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: calc($index * 0.93);
+			background-image: url(../images/dist/icons/bonus-diamond.png);
+			margin-bottom: calc($index * 3.33);
+			transition: border 0.25s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					border: 1px solid rgba(#fff, 0.5);
+				}
 			}
 		}
 	}

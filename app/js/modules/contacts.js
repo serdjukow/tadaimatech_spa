@@ -21,7 +21,7 @@ const contacts = () => {
                     <form>
                         <input placeholder="Ваше имя" />
                         <input placeholder="Ваш e-mail" />
-                        <textarea placeholder="Сообщение..."></textarea>
+                        <textarea placeholder="Сообщение..." rows="15"></textarea>
                         <button class="contacts-form__button button">Отправить</button>
                     </form>
     

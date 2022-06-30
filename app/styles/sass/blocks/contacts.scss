@@ -1,22 +1,13 @@
 .block-contacts {
-	// padding-top: calc($index * .3);
-	// max-width: calc($index * 32);
-	// margin: 0 auto;
-	// .block-contacts__row
-
 	&__row {
-		display: grid;
-		grid-template-columns: calc($index * 28) 1fr;
-		gap: calc($index * 1.33);
-		max-width: calc($index * 43);
+		padding: 0 calc($index * 0.5 * $coaficent-md)
+			calc($index * 0.5 * $coaficent-sm);
 		margin: 0 auto;
 	}
-
-	// .block-contacts__map
-
 	&__map {
 		position: relative;
-		//max-height: calc($index * 22);
+		height: calc($index * 22);
+		margin-bottom: calc($index * 1);
 		img,
 		iframe {
 			position: absolute;
@@ -26,121 +17,208 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			
 		}
 		iframe {
-			
-    		filter: grayscale(100%) invert(1);
+			filter: grayscale(100%) invert(1);
 			-webkit-filter: grayscale(100%) invert(1);
 		}
 	}
 
-	// .block-contacts__form
-
-	&__form {
-	//	margin-bottom: calc($index * 1.46);
-	}
-	.page-title {
-	}
-}
-.contacts-form {
-	form > * {
-		&:not(:last-child) {
-			margin-bottom: calc($index * 0.66);
-		}
-	}
-	input,
-	textarea {
-		display: block;
-		width: 100%;
-		border: 1px solid rgba($white, 0.05);
-		background-color: $black;
-		padding: calc($index * 0.46) calc($index * 0.63);
-		font-weight: 500;
-		font-size: calc($index * 0.53);
-		line-height: 1.2;
-		color: rgba($white, 0.2);
-		&:focus,
-		&:required {
-			color: rgba($white, 0.9);
-		}
-	}
-
-	textarea {
-		min-height: calc($index * 8);
-	}
-	
-
-	// .contacts-form__title
-
-	&__title {
-		font-weight: 300;
-		font-size: calc($index * .6);
-		line-height: 1.3;
-		color: rgba($white, 0.75);
-		margin-bottom: calc($index * 0.83);
-		& > * {
-			margin: 0;
-		}
-	}
-
-	form {
+	.contacts-form {
 		margin-bottom: calc($index * 2);
+		form > * {
+			&:not(:last-child) {
+				margin-bottom: calc($index * 0.66 * $coaficent-sm);
+			}
+		}
+		input,
+		textarea {
+			display: block;
+			width: 100%;
+			border: 1px solid rgba($white, 0.05);
+			background-color: $black;
+			padding: calc($index * 0.46 * $coaficent-sm)
+				calc($index * 0.63 * $coaficent-sm);
+			font-weight: 500;
+			font-size: calc($index * 0.53 * $coaficent-sm);
+			line-height: 1.2;
+			color: rgba($white, 0.2);
+			&:focus,
+			&:required {
+				color: rgba($white, 0.9);
+			}
+		}
+
+		// .contacts-form__title
+
+		&__title {
+			font-weight: 300;
+			font-size: calc($index * 0.6 * $coaficent-sm);
+			line-height: 1.3;
+			color: rgba($white, 0.75);
+			margin-bottom: calc($index * 0.83 * $coaficent-sm);
+			& > * {
+				margin: 0;
+			}
+		}
+
+		form {
+			margin-bottom: calc($index * 2 * $coaficent-sm);
+		}
+
+		&__button {
+			//padding: calc($index * 0.5 * $coaficent-md) calc($index * 2.23 * $coaficent-md) !important;
+		}
+
+		// .contacts-form__info
+
+		&__info {
+		}
 	}
+	.form-info {
+		font-weight: 300;
+		font-size: calc($index * 0.6 * $coaficent-sm);
+		line-height: 1.4;
+		color: rgba($white, 0.75);
+		& > * {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: calc($index * 0.4 * $coaficent-sm);
+		}
+		& > *::before {
+			flex: 0 0 calc($index * 1.23 * $coaficent-sm);
+			content: "";
+			display: block;
+			width: calc($index * 1.23 * $coaficent-sm);
+			height: calc($index * 1.23 * $coaficent-sm);
+			border: 1px solid rgba($white, 0.05);
+			margin-right: calc($index * 0.4 * $coaficent-sm);
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: 0.75;
+		}
 
-	&__button {
-		padding: calc($index * 0.5) calc($index * 2.23) !important;
-	}
+		// .form-info__address
 
-	// .contacts-form__info
+		&__address {
+			&::before {
+				background-size: 55%;
+				background-image: url(../images/dist/icons/address.svg);
+			}
+			span {
+				font-family: noto-sans-tm;
+			}
+		}
 
-	&__info {
+		// .form-info__tel
 
+		&__tel {
+			font-family: noto-sans-tm;
+			&::before {
+				background-size: 55%;
+				background-image: url(../images/dist/icons/phone.svg);
+			}
+		}
 	}
 }
 
-.form-info {
-	font-weight: 300;
-	font-size: calc($index * .6);
-	line-height: 1.4;
-	color: rgba($white, 0.75);
-	& > * {
-		display: flex;
-		align-items: flex-start;
-		margin-bottom: calc($index * .4);
-	}
-	& > *::before {
-		flex: 0 0 calc($index * 1.23);
-		content: '';
-		display: block;
-		width: calc($index * 1.23);
-		height: calc($index * 1.23);
-		border: 1px solid rgba($white, 0.05);
-		margin-right: calc($index * .4);
-		background-position: center center;
-		background-repeat: no-repeat;
-		opacity: .75;		
-	}
-
-	// .form-info__address
-
-	&__address {
-		&::before {
-			background-size: calc($index * .46);
-			background-image: url(../images/dist/icons/address.svg);
+@include media-breakpoint-up(sm) {
+	.block-contacts {
+		&__row {
+			max-width: calc($index * 43);
 		}
-		span {
-			font-family: noto-sans-tm;
+
+		// .block-contacts__map
+
+		&__map {
+		}
+		.contacts-form {
+			input,
+			textarea {
+				padding: calc($index * 0.46) calc($index * 0.63 * $coaficent-md);
+				font-size: calc($index * 0.53 * $coaficent-md);
+			}
+
+			// .contacts-form__title
+
+			&__title {
+				font-size: calc($index * 0.6 * $coaficent-md);
+				margin-bottom: calc($index * 0.83 * $coaficent-md);
+			}
+
+			form {
+				margin-bottom: calc($index * 2 * $coaficent-md);
+			}
+
+			&__button {
+				//padding: calc($index * 0.5) calc($index * 2.23) !important;
+			}
+		}
+
+		.form-info {
+			font-size: calc($index * 0.6 * $coaficent-md);
+			& > * {
+				margin-bottom: calc($index * 0.4 * $coaficent-md);
+			}
+			& > *::before {
+				flex: 0 0 calc($index * 1.23 * $coaficent-md);
+				width: calc($index * 1.23 * $coaficent-md);
+				height: calc($index * 1.23 * $coaficent-md);
+			}
 		}
 	}
+}
 
-	// .form-info__tel
+@include media-breakpoint-up(lg) {
+	.block-contacts {
+		&__row {
+			display: grid;
+			grid-template-columns: calc($index * 28) 1fr;
+			gap: calc($index * 1.33);
+			max-width: calc($index * 43);
+			margin: 0 auto;
+		}
 
-	&__tel {
-		font-family: noto-sans-tm;
-		&::before {
-			background-size: calc($index * .66);
-			background-image: url(../images/dist/icons/phone.svg);
+		// .block-contacts__map
+
+		&__map {
+			height: auto;
+			margin-bottom: 0;
+		}
+		.contacts-form {
+			margin-bottom: 0;
+			input,
+			textarea {
+				padding: calc($index * 0.46) calc($index * 0.63);
+				font-size: calc($index * 0.53);
+			}
+
+			// .contacts-form__title
+
+			&__title {
+				font-size: calc($index * 0.6);
+				margin-bottom: calc($index * 0.83);
+			}
+
+			form {
+				margin-bottom: calc($index * 2);
+			}
+
+			&__button {
+				padding: calc($index * 0.5) calc($index * 2.23) !important;
+			}
+		}
+
+		.form-info {
+			font-size: calc($index * 0.6);
+			& > * {
+				margin-bottom: calc($index * 0.4);
+			}
+			& > *::before {
+				flex: 0 0 calc($index * 1.23);
+				width: calc($index * 1.23);
+				height: calc($index * 1.23);
+			}
 		}
 	}
 }

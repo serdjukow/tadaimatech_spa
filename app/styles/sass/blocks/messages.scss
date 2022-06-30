@@ -97,26 +97,7 @@
 .contact-us {
 }
 
-.button {
-	padding: calc($index * 0.5) calc($index * 1.55);
-	white-space: nowrap;
-	font-weight: 500;
-	font-size: calc($index * 0.535);
-	line-height: 1.2;
-	text-align: center;
-	text-transform: uppercase;
-	color: #8e8e8e;
-	background-color: $button-bg;
-	border: none;
-	appearance: none;
-	user-select: none;
-	transition: background-color 0.25s ease;
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: darken($button-bg, 3%);
-		}
-	}
-}
+
 
 .message-timer {
 	display: flex;

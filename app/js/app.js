@@ -1,26 +1,37 @@
 import Swiper, { Navigation, Thumbs } from "swiper";
-import marketplaceToHtml from './modules/marketplace.js';
-import sliderServices from './modules/services.js';
-import sliderCases from './modules/cases.js';
-import aboutUs from './modules/about-us.js';
-import principles from './modules/principles.js';
-import contacts from './modules/contacts.js'
-import team from './modules/team.js'
-import startContent from  './modules/start-content.js'
-import {contactUsMessage, menuLinkMessage, cookieMessage, assistantMessage} from './modules/messages.js'
-import {preloaderToHtml, acquaintanceToHtml, acquaintanceFormNameToHtml, acquaintanceFormRoleToHtml, settingsToHtml} from './modules/game.js'
-import marquee from './modules/marquee.js'
+import marketplaceToHtml from "./modules/marketplace.js";
+import sliderServices from "./modules/services.js";
+import sliderCases from "./modules/cases.js";
+import aboutUs from "./modules/about-us.js";
+import principles from "./modules/principles.js";
+import contacts from "./modules/contacts.js";
+import team from "./modules/team.js";
+import startContent from "./modules/start-content.js";
+import {
+	contactUsMessage,
+	menuLinkMessage,
+	cookieMessage,
+	assistantMessage,
+} from "./modules/messages.js";
+import {
+	preloaderToHtml,
+	acquaintanceToHtml,
+	acquaintanceFormNameToHtml,
+	acquaintanceFormRoleToHtml,
+	settingsToHtml,
+} from "./modules/game.js";
+import marquee from "./modules/marquee.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-	settingsToHtml()
-	marquee()
-	cookieMessage()
-	
+	settingsToHtml();
+	marquee();
+	cookieMessage();
+
 	const currentDate = () => {
 		let currentYear = new Date().getFullYear();
 		document.getElementById("current-year").innerHTML = currentYear;
 	};
-	currentDate()
+	currentDate();
 
 	const menu = () => {
 		const navBurger = document.querySelector("#nav-burger");
@@ -29,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const bodyOverlay = document.querySelector(".body-overlay");
 
 		navBurger.addEventListener("click", (e) => {
-			let el = e.target;					
+			let el = e.target;
 			el.closest("._active") ? removeNavActive() : addNavActive();
 		});
 
@@ -53,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	menu();
 
-
-
 	const menuSettings = () => {
 		const settingsBurger = document.querySelector("#settings-burger");
 		const headerLeft = document.querySelector(".header__left");
@@ -74,77 +83,75 @@ document.addEventListener("DOMContentLoaded", () => {
 	menuSettings();
 
 	const currentPageToHTML = () => {
-		if(sessionStorage.getItem("menuButton")) {
-			pageContent(sessionStorage.getItem("menuButton"))
-			addActiveItem(sessionStorage.getItem("menuButton"))
+		if (sessionStorage.getItem("menuButton")) {
+			pageContent(sessionStorage.getItem("menuButton"));
+			addActiveItem(sessionStorage.getItem("menuButton"));
 		} else {
-			startContent()
-			addActiveItem('home')
+			startContent();
+			addActiveItem("home");
 		}
-		
 	};
 	currentPageToHTML();
 
-	
-
 	const changeActiveItem = (indexClickedItem) => {
-		const menuItems = document.querySelectorAll('[data-menu]')
-        menuItems.forEach((item, index) => {
-            item.classList.remove('_active');
-            if (index === indexClickedItem) {
-                item.classList.add('_active')
-            }
-        })        
-    }
+		const menuItems = document.querySelectorAll("[data-menu]");
+		menuItems.forEach((item, index) => {
+			item.classList.remove("_active");
+			if (index === indexClickedItem) {
+				item.classList.add("_active");
+			}
+		});
+	};
 
 	function addActiveItem(dataActiveItem) {
-		const menuItems = document.querySelectorAll('[data-menu]')
-        menuItems.forEach(item => {
-			let dataValue = item.attributes['data-menu'].value	
-            item.classList.remove('_active');
-            if (dataValue === dataActiveItem) {
-                item.classList.add('_active')
-            }
-        })        
-    }
-	
+		const menuItems = document.querySelectorAll("[data-menu]");
+		menuItems.forEach((item) => {
+			let dataValue = item.attributes["data-menu"].value;
+			item.classList.remove("_active");
+			if (dataValue === dataActiveItem) {
+				item.classList.add("_active");
+			}
+		});
+	}
+
 	function navigation() {
-		const menuItems = document.querySelectorAll('[data-menu]')
+		const menuItems = document.querySelectorAll("[data-menu]");
 		const navBurger = document.querySelector("#nav-burger");
 		const navigation = document.querySelector(".navigation");
 		const body = document.querySelector("body");
 		const bodyOverlay = document.querySelector(".body-overlay");
 
 		menuItems.forEach((item, index) => {
-			item.addEventListener('click', () => {
-				let dataValue = item.attributes['data-menu'].value		
+			item.addEventListener("click", () => {
+				let dataValue = item.attributes["data-menu"].value;
 				pageContent(dataValue);
 				sessionStorage.setItem("menuButton", dataValue);
-				changeActiveItem(index)
+				changeActiveItem(index);
 				navBurger.classList.remove("_active");
 				navigation.classList.remove("_active");
 				body.classList.remove("_lock");
 				bodyOverlay.classList.remove("_active");
-			})
-		})
+			});
+		});
 	}
 	navigation();
 
 	function pageContent(page) {
-		
-		page === "home" && startContent()			
-		page === "about-us" && aboutUs()
-		page === "services" && sliderServices()
-		page === "team" && team()
-		page === "cases" && sliderCases()
-		page === "contacts" && contacts()
-		page === "principles" && principles()
-		page === "marketplace" && marketplaceToHtml()
+		page === "home" && startContent();
+		page === "about-us" && aboutUs();
+		page === "services" && sliderServices();
+		page === "team" && team();
+		page === "cases" && sliderCases();
+		page === "contacts" && contacts();
+		page === "principles" && principles();
+		page === "marketplace" && marketplaceToHtml();
 	}
 
 	function messageTimer() {
 		const messageTimerTime = document.querySelector(".message-timer__time");
-		const messageTimerSpan = document.querySelector(".message-timer__track span");
+		const messageTimerSpan = document.querySelector(
+			".message-timer__track span"
+		);
 		const messageTimerTrack = document.querySelector(".message-timer__track");
 		messageTimerTime.textContent = "0:00";
 
@@ -170,6 +177,5 @@ document.addEventListener("DOMContentLoaded", () => {
 			++timeMinut;
 		}, 1000);
 	}
-
-	
+	messageTimer();
 });
