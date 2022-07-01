@@ -133,6 +133,11 @@
 		&__map {
 		}
 		.contacts-form {
+			form > * {
+				&:not(:last-child) {
+					margin-bottom: calc($index * 0.66 * $coaficent-md);
+				}
+			}
 			input,
 			textarea {
 				padding: calc($index * 0.46) calc($index * 0.63 * $coaficent-md);
@@ -187,6 +192,11 @@
 		}
 		.contacts-form {
 			margin-bottom: 0;
+			form > * {
+				&:not(:last-child) {
+					margin-bottom: calc($index * 0.66);
+				}
+			}
 			input,
 			textarea {
 				padding: calc($index * 0.46) calc($index * 0.63);
@@ -205,7 +215,7 @@
 			}
 
 			&__button {
-				padding: calc($index * 0.5) calc($index * 2.23) !important;
+				//padding: calc($index * 0.5) calc($index * 2.23) !important;
 			}
 		}
 
