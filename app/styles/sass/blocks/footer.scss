@@ -1,0 +1,26 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: calc($index * 0.5 * $coaficent-md);
+	overflow: hidden;
+	margin-right: calc($index * 0.33);
+	margin-left: calc($index * 0.33);
+	p {
+		font-weight: 400;
+		font-size: calc($index * 0.67 * $coaficent-md);
+		line-height: 1.1;
+		text-align: center;
+		margin: 0;
+		opacity: 0.75;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: calc($index * 0.5);
+		margin-right: calc($index * 2.33);
+		margin-left: calc($index * 2.33);
+		p {
+			font-size: calc($index * 0.67);
+		}
+	}
+}

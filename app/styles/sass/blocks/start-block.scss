@@ -1,0 +1,99 @@
+.start-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	min-height: calc($index * 19.5 * $coaficent-sm);
+	padding: calc($index * 0.34 * $coaficent-sm);
+	// .start-block__title
+
+	// .start-block__logo
+
+	&__logo {
+		position: relative;
+		width: calc($index * 5.7 * 1.5);
+		height: calc($index * 4.1 * 1.5);
+		margin-left: auto;
+		margin-top: 0;
+		margin-right: auto;
+		margin-bottom: calc($index * 2.5 * 1.3);
+		user-select: none;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: calc($index * 0.8 * 2);
+		h1 {
+			font-family: $titlefont;
+			font-weight: 100;
+			line-height: 1.19;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: calc($index * 3.47 * 1.2);
+			margin-bottom: calc($index * 2.5 * 1.3);
+		}
+		p {
+			font-weight: 300;
+			font-size: calc($index * 1.07 * 1.3);
+			line-height: 1.3;
+			text-align: center;
+			max-width: calc($index * 20 * 1.3);
+			margin: 0 auto;
+		}
+	}
+	&__button {
+	}
+
+	@include media-breakpoint-up(sm) {
+		min-height: calc($index * 19.5);
+		padding: calc($index * 0.34);
+
+		&__logo {
+			width: calc($index * 5.7 * 1.3);
+			height: calc($index * 4.1 * 1.3);
+			margin-bottom: calc($index * 2.5);
+		}
+
+		&__title {
+			margin-bottom: calc($index * 0.8 * 1.3);
+			h1 {
+				font-size: calc($index * 3.47 * 1.1);
+				margin-bottom: calc($index * 2.5 * 1.1);
+			}
+			p {
+				font-size: calc($index * 1.07 * 1.2);
+				max-width: calc($index * 20 * 1.2);
+			}
+		}
+		&__button {
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		min-height: calc($index * 19.5);
+		padding: calc($index * 0.34);
+
+		&__logo {
+			width: calc($index * 5.7);
+			height: calc($index * 4.1);
+			margin-bottom: calc($index * 2.5);
+		}
+
+		&__title {
+			margin-bottom: calc($index * 0.8);
+			h1 {
+				font-size: calc($index * 3.47);
+				margin-bottom: calc($index * 2.5);
+			}
+			p {
+				font-size: calc($index * 1.07);
+				max-width: calc($index * 20);
+			}
+		}
+		&__button {
+		}
+	}
+}
