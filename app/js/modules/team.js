@@ -58,14 +58,20 @@ const team = () => {
 							<div class="slider-team-logo__img">
 									<img src="images/dist/assistant.png" />
 							</div>
-							<p class="slider-team-logo__title">Орещенко Леонид</p>
+							<div class="slider-team-logo__title">
+								<h5 class="slider-team-logo__title">Орещенко Леонид</h5>
+								<p>Продюсер цифровых решений</p>
+							</div>							
 						</div>
 
 						<div class="swiper-slide slider-team-logo__slide">
 							<div class="slider-team-logo__img">
 									<img src="images/dist/assistant.png" />
 							</div>
-							<p class="slider-team-logo__title">Орещенко Леонид</p>
+							<div class="slider-team-logo__title">
+								<h5 class="slider-team-logo__title">Орещенко Леонид</h5>
+								<p>Продюсер цифровых решений</p>
+							</div>							
 						</div>
 
 						<!--/  Slides -->
@@ -80,7 +86,7 @@ const team = () => {
 
     const sliderTeamLogo = new Swiper(".slider-team-logo", {
 			loop: false,
-			slidesPerView: 4,
+			slidesPerView: 3,
 			freeMode: true,
 			watchSlidesProgress: true,
 	});
