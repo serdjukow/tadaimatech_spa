@@ -19,17 +19,19 @@ const team = () => {
 
 						<!-- Slides -->
 
-							<div class="swiper-slide slider-team__slide">
-									<div class="slider-team__img">
-											<img src="images/dist/team/leonid.jpg" alt="" />
-									</div>
-									<div class="slider-team__title">
-											<h3> Орещенко Леонид</h3>
-											<p>
-											Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
-											</p>
-									</div>
-							</div>
+
+						<div class="swiper-slide slider-team__slide">
+						<div class="slider-team__img">
+								<img src="images/dist/team/leonid.jpg" alt="" />
+						</div>
+						<div class="slider-team__title">
+								<h3> Орещенко Леонид</h3>
+								<p>Продюсер цифровых решений</p>
+								<p>
+								Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+								</p>
+						</div>
+				</div>
 
 							<div class="swiper-slide slider-team__slide">
 									<div class="slider-team__img">
@@ -37,11 +39,77 @@ const team = () => {
 									</div>
 									<div class="slider-team__title">
 											<h3> Орещенко Леонид</h3>
+											<p>Продюсер цифровых решений</p>
 											<p>
 											Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
 											</p>
 									</div>
 							</div>
+
+							<div class="swiper-slide slider-team__slide">
+							<div class="slider-team__img">
+									<img src="images/dist/team/leonid.jpg" alt="" />
+							</div>
+							<div class="slider-team__title">
+									<h3> Орещенко Леонид</h3>
+									<p>Продюсер цифровых решений</p>
+									<p>
+									Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+									</p>
+							</div>
+					</div>
+
+					<div class="swiper-slide slider-team__slide">
+					<div class="slider-team__img">
+							<img src="images/dist/team/leonid.jpg" alt="" />
+					</div>
+					<div class="slider-team__title">
+							<h3> Орещенко Леонид</h3>
+							<p>Продюсер цифровых решений</p>
+							<p>
+							Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+							</p>
+					</div>
+			</div>
+
+			<div class="swiper-slide slider-team__slide">
+			<div class="slider-team__img">
+					<img src="images/dist/team/leonid.jpg" alt="" />
+			</div>
+			<div class="slider-team__title">
+					<h3> Орещенко Леонид</h3>
+					<p>Продюсер цифровых решений</p>
+					<p>
+					Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+					</p>
+			</div>
+	</div>
+
+	<div class="swiper-slide slider-team__slide">
+	<div class="slider-team__img">
+			<img src="images/dist/team/leonid.jpg" alt="" />
+	</div>
+	<div class="slider-team__title">
+			<h3> Орещенко Леонид</h3>
+			<p>Продюсер цифровых решений</p>
+			<p>
+			Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+			</p>
+	</div>
+</div>
+
+<div class="swiper-slide slider-team__slide">
+<div class="slider-team__img">
+		<img src="images/dist/team/leonid.jpg" alt="" />
+</div>
+<div class="slider-team__title">
+		<h3> Орещенко Леонид</h3>
+		<p>Продюсер цифровых решений</p>
+		<p>
+		Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+		</p>
+</div>
+</div>
 
 					<!--/  Slides -->
 				</div>
@@ -59,8 +127,10 @@ const team = () => {
 									<img src="images/dist/assistant.png" />
 							</div>
 							<div class="slider-team-logo__title">
-								<h5 class="slider-team-logo__title">Орещенко Леонид</h5>
-								<p>Продюсер цифровых решений</p>
+								<h5 class="slider-team-logo__title">
+									<span>Орещенко</span>
+									<span>Леонид</span>
+								</h5>
 							</div>							
 						</div>
 
@@ -69,10 +139,72 @@ const team = () => {
 									<img src="images/dist/assistant.png" />
 							</div>
 							<div class="slider-team-logo__title">
-								<h5 class="slider-team-logo__title">Орещенко Леонид</h5>
-								<p>Продюсер цифровых решений</p>
+								<h5 class="slider-team-logo__title">
+									<span>Орещенко</span>
+									<span>Леонид</span>
+								</h5>
 							</div>							
 						</div>
+
+						<div class="swiper-slide slider-team-logo__slide">
+						<div class="slider-team-logo__img">
+								<img src="images/dist/assistant.png" />
+						</div>
+						<div class="slider-team-logo__title">
+							<h5 class="slider-team-logo__title">
+								<span>Орещенко</span>
+								<span>Леонид</span>
+							</h5>
+						</div>							
+					</div>
+
+					<div class="swiper-slide slider-team-logo__slide">
+					<div class="slider-team-logo__img">
+							<img src="images/dist/assistant.png" />
+					</div>
+					<div class="slider-team-logo__title">
+						<h5 class="slider-team-logo__title">
+							<span>Орещенко</span>
+							<span>Леонид</span>
+						</h5>
+					</div>							
+				</div>
+
+				<div class="swiper-slide slider-team-logo__slide">
+				<div class="slider-team-logo__img">
+						<img src="images/dist/assistant.png" />
+				</div>
+				<div class="slider-team-logo__title">
+					<h5 class="slider-team-logo__title">
+						<span>Орещенко</span>
+						<span>Леонид</span>
+					</h5>
+				</div>							
+			</div>
+
+			<div class="swiper-slide slider-team-logo__slide">
+			<div class="slider-team-logo__img">
+					<img src="images/dist/assistant.png" />
+			</div>
+			<div class="slider-team-logo__title">
+				<h5 class="slider-team-logo__title">
+					<span>Орещенко</span>
+					<span>Леонид</span>
+				</h5>
+			</div>							
+		</div>
+
+		<div class="swiper-slide slider-team-logo__slide">
+		<div class="slider-team-logo__img">
+				<img src="images/dist/assistant.png" />
+		</div>
+		<div class="slider-team-logo__title">
+			<h5 class="slider-team-logo__title">
+				<span>Орещенко</span>
+				<span>Леонид</span>
+			</h5>
+		</div>							
+	</div>
 
 						<!--/  Slides -->
 				</div>
