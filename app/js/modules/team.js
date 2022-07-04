@@ -1,96 +1,108 @@
-import Swiper, { Navigation, Thumbs } from "swiper";
+import Swiper, { Navigation, Thumbs, Pagination } from "swiper";
 const team = () => {
 	function teamToHtml() {
 		const pageBody = document.querySelector(".page-content");
 		pageBody.innerHTML = "";
 		pageBody.innerHTML = `
-        <section class="page-content__container showcase">
-        <div class="showcase__content-wrapper">
-            <div class="showcase__content">
+		<div class="page-content__container block-team">
+		<div class="page-content__title page-title">
+				<h2>Наша команда</h2>
+		</div>
+		<div class="block-team__container">
+		<div class="swiper-pagination"></div>
 
-                <div class="showcase-carousel">
+		
+		<!-- Slider main container -->		
+		<div class="swiper slider-team">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
 
-                    <div class="swiper-wrapper">
+						<!-- Slides -->
 
-                        <div class="swiper-slide showcase-carousel__item">
-                            <div class="showcase-carousel__image-wrapper">
-                                <div class="showcase-carousel__image-left">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/1.png);"></div>
-                                </div>
-                                <div class="showcase-carousel__image-right">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/1.png);"></div>
-                                </div>
-                            </div>
-                            <p>Front</p>
-                        </div>
+							<div class="swiper-slide slider-team__slide">
+									<div class="slider-team__img">
+											<img src="images/dist/team/leonid.jpg" alt="" />
+									</div>
+									<div class="slider-team__title">
+											<h3> Орещенко Леонид</h3>
+											<p>
+											Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+											</p>
+									</div>
+							</div>
 
-                        <div class="swiper-slide showcase-carousel__item">
-                            <div class="showcase-carousel__image-wrapper">
-                                <div class="showcase-carousel__image-left">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/2.png);"></div>
-                                </div>
-                                <div class="showcase-carousel__image-right">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/2.png);"></div>
-                                </div>
-                            </div>
-                            <p>Front Two</p>
-                        </div>
+							<div class="swiper-slide slider-team__slide">
+									<div class="slider-team__img">
+											<img src="images/dist/team/leonid.jpg" alt="" />
+									</div>
+									<div class="slider-team__title">
+											<h3> Орещенко Леонид</h3>
+											<p>
+											Посредник между бизнесом и программистами - бизнес консультант, разрабатываю алгоритмы автоматизации бизнес-процессов для крупных компаний и государственных учреждениях, точный "переводчик" клиентских желаний на технический  язык и неиссякаемый генератор бизнес-идей
+											</p>
+									</div>
+							</div>
 
-                        <div class="swiper-slide showcase-carousel__item">
-                            <div class="showcase-carousel__image-wrapper">
-                                <div class="showcase-carousel__image-left">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/3.png);"></div>
-                                </div>
-                                <div class="showcase-carousel__image-right">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/3.png);"></div>
-                                </div>
-                            </div>
-                            <p>Side</p>
-                        </div>
+					<!--/  Slides -->
+				</div>
+		</div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
 
-                        <div class="swiper-slide showcase-carousel__item">
-                            <div class="showcase-carousel__image-wrapper">
-                                <div class="showcase-carousel__image-left">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/4.png);"></div>
-                                </div>
-                                <div class="showcase-carousel__image-right">
-                                    <div class="showcase-carousel__image" style="background-image: url(images/dist/team/4.png);"></div>
-                                </div>
-                            </div>
-                            <p>Back</p>
-                        </div>
+		<div thumbsSlider="" class="swiper slider-team-logo">
+				<div class="swiper-wrapper">
 
-                    </div>
+						<!-- Slides -->
 
-                </div>
+						<div class="swiper-slide slider-team-logo__slide">
+							<div class="slider-team-logo__img">
+									<img src="images/dist/assistant.png" />
+							</div>
+							<p class="slider-team-logo__title">Орещенко Леонид</p>
+						</div>
 
-                <div class="showcase-navigation">
-                    <div class="showcase-navigation__prev"></div>
-                    <div class="showcase-navigation__next"></div>
-                </div>
+						<div class="swiper-slide slider-team-logo__slide">
+							<div class="slider-team-logo__img">
+									<img src="images/dist/assistant.png" />
+							</div>
+							<p class="slider-team-logo__title">Орещенко Леонид</p>
+						</div>
 
-            </div>
-        </div>
+						<!--/  Slides -->
+				</div>
+		</div>
+		</div>
 
-        <video src="images/dist/team/smoke-background-optimized.mp4" class="showcase__video" autoplay loop muted></video>
-
-    </section>
+</div>
 		`;
 	}
     teamToHtml()
 
-    const showSlider = new Swiper('.showcase-carousel', {
-        modules: [Navigation],
-        loop: true,
-        slidesPerView: 3,
-        speed: 1800,
-        centeredSlides: true,
-        navigation: {
-            nextEl: '.showcase-navigation__next',
-            prevEl: '.showcase-navigation__prev'
-        }
-    })
+    const sliderTeamLogo = new Swiper(".slider-team-logo", {
+			loop: false,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesProgress: true,
+	});
 
-    document.querySelector('video') && (document.querySelector('video').playbackRate = 2)
+	const sliderTeam = new Swiper(".slider-team", {
+			modules: [Navigation, Thumbs, Pagination],
+			loop: true,
+			slidesPerView: 1,
+			navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + "</span>";
+				},
+			},
+			thumbs: {
+					swiper: sliderTeamLogo,
+			},
+	});
 }
 export default team

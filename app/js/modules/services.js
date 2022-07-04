@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Thumbs } from "swiper";
+import Swiper, { Navigation, Thumbs, Pagination } from "swiper";
 const sliderServices = () => {
     function servicesToHtml() {
         const pageBody = document.querySelector(".page-content");
@@ -9,6 +9,7 @@ const sliderServices = () => {
             <h2>Мы разрабатываем</h2>
         </div>
         <div class="block-services__container">
+				<div class="swiper-pagination"></div>
         <!-- Slider main container -->
         <div class="swiper slider-services">
             <!-- Additional required wrapper -->
@@ -166,12 +167,19 @@ const sliderServices = () => {
     });
 
     const sliderServices = new Swiper(".slider-services", {
-        modules: [Navigation, Thumbs],
+        modules: [Navigation, Thumbs, Pagination],
         loop: false,
         slidesPerView: 1,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+				pagination: {
+          el: ".swiper-pagination",
+					clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
         },
         thumbs: {
             swiper: sliderServicesLogo,

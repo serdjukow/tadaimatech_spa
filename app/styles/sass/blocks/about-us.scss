@@ -6,7 +6,7 @@
 	&__title {
 		display: flex;
 		justify-content: center;
-		align-items: center;		
+		align-items: center;
 		flex-direction: column;
 		gap: calc($index * 1);
 		border-bottom: 1px solid rgba(#f5f5f5, 0.05);
@@ -48,6 +48,7 @@
 		font-size: calc($index * 0.8 * $coaficent-sm);
 		line-height: 1.3;
 		color: rgba(#f5f5f5, 0.75);
+		padding: 0 calc($index * 0.5);
 	}
 
 	// .block-about-us__row
@@ -56,11 +57,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: calc($index * 5.33);
-		padding: calc($index * 4.33)
-			calc($index * 1 ) calc($index * 1);
-		//padding-top: calc($index * 4.33 * $coaficent-sm);
-		//height: calc(100% - $index * 2.1 * $coaficent-sm);
-		//max-width: calc($index * 40);
+		padding: calc($index * 4.33) calc($index * 1) calc($index * 1);
 		margin: 0 auto;
 	}
 
@@ -74,8 +71,9 @@
 
 	&__item {
 		display: flex;
-		align-items: center;
-		gap: calc($index * 2 * $coaficent-sm);
+		flex-direction: column;
+		align-items: flex-start;
+		gap: calc($index * 2);
 		&:not(:last-child) {
 			margin-bottom: calc($index * 2.16 * $coaficent-sm);
 		}
@@ -84,7 +82,7 @@
 	// .block-about-us__item-img
 
 	&__item-img {
-		flex: 0 0 calc($index * 8.66 * $coaficent-sm);
+		flex: 1 0 calc($index * 6);
 		img {
 			display: block;
 			width: 100%;
@@ -106,12 +104,14 @@
 
 	&__contact {
 		//flex: 0 0 calc($index * 17);
+
 		font-weight: 300;
 		font-size: calc($index * 0.6 * $coaficent-sm);
 		line-height: 1.3;
 		color: rgba(#f5f5f5, 0.75);
-		margin-left: calc($index * 1 * $coaficent-sm);
+		//margin-left: calc($index * 1 * $coaficent-sm);
 		margin-bottom: calc($index * 1 * $coaficent-sm);
+		max-width: calc($index * 27.9);
 	}
 
 	// .block-about-us__contact-img
@@ -156,131 +156,181 @@
 
 	&__contact-buttons {
 		display: flex;
+		flex-direction: column;
 		gap: calc($index * 0.43 * $coaficent-sm);
 	}
 
 	// .block-about-us__contact-button
 
 	&__contact-button {
-		padding: calc($index * 0.5 * $coaficent-sm) calc($index * 1 * $coaficent-sm) !important;
+		padding: calc($index * 0.5 * $coaficent-sm) calc($index * 1) !important;
 	}
 
-	// @include media-breakpoint-up(sm) {
-	// 	padding-top: calc($index * 1.5 * $coaficent-md);
-	// 	// .block-about-us__title
-
-	// 	&__title {
-	// 		flex-direction: row;
-	// 		gap: calc($index * 2.26 * $coaficent-md);
-	// 		padding-bottom: calc($index * 0.66 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__logo
-
-	// 	&__logo {
-	// 		gap: calc($index * 0.5 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__logo-img
-
-	// 	&__logo-img {
-	// 		width: calc($index * 1.33 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__logo-text
-
-	// 	&__logo-text {
-	// 		font-size: calc($index * 1.06 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__title-text
-
-	// 	&__title-text {
-	// 		font-size: calc($index * 0.8 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__row
-
-	// 	&__row {
-	// 		grid-template-columns: 1fr;
-	// 		gap: calc($index * 5.33 * $coaficent-md);
-	// 		//padding: calc($index * 4.33) calc($index * 3.33) calc($index * 3.33);
-	// 		//height: calc(100% - $index * 2.1);
-			
-
-	// 	}
-
-	// 	// .block-about-us__content
-
-	// 	&__content {
-	// 		margin-bottom: 0;
-	// 	}
-
-	// 	// .block-about-us__item
-
-	// 	&__item {
-	// 		gap: calc($index * 2 * $coaficent-md);
-	// 		&:not(:last-child) {
-	// 			margin-bottom: calc($index * 2.16 * $coaficent-md);
-	// 		}
-	// 	}
-
-	// 	// .block-about-us__item-img
-
-	// 	&__item-img {
-	// 		flex: 0 0 calc($index * 8.66 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__item-text
-
-	// 	&__item-text {
-	// 		font-size: calc($index * 0.8 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__contact
-
-	// 	&__contact {
-	// 		font-size: calc($index * 0.6 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__contact-img
-
-	// 	&__contact-img {
-	// 		width: calc($index * 4.46 * $coaficent-md);
-	// 		height: calc($index * 4.46 * $coaficent-md);
-	// 		margin-bottom: calc($index * 0.66 * $coaficent-md);
-	// 		border: calc($index * 0.06 * $coaficent-md) solid #424242;
-	// 		padding: calc($index * 0.23 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__contact-subtitle
-
-	// 	&__contact-subtitle {
-	// 		margin-bottom: calc($index * 0.43 * $coaficent-md);
-	// 		max-width: calc($index * 10.66 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__contact-title
-
-	// 	&__contact-title {
-	// 		margin-bottom: calc($index * 1.66 * $coaficent-md);
-	// 		h4 {
-	// 			font-size: calc($index * 0.66 * $coaficent-md);
-	// 		}
-	// 	}
-
-	// 	// .block-about-us__contact-buttons
-
-	// 	&__contact-buttons {
-	// 		gap: calc($index * 0.43 * $coaficent-md);
-	// 	}
-
-	// 	// .block-about-us__contact-button
-
-	// 	&__contact-button {
-	// 		padding: calc($index * 0.5 * $coaficent-md) calc($index * 1 * $coaficent-md) !important;
-	// 	}
-	// }
+	@include media-breakpoint-up(sm) {
+		position: relative;
+		padding-top: calc($index * 0.5 * $coaficent-md);
+		// .block-about-us__title
+	
+		&__title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: calc($index * 1);
+			border-bottom: 1px solid rgba(#f5f5f5, 0.05);
+			padding-bottom: calc($index * 0.66 * $coaficent-md);
+		}
+	
+		// .block-about-us__logo
+	
+		&__logo {
+			display: flex;
+			align-items: center;
+			gap: calc($index * 0.5 * $coaficent-md);
+		}
+	
+		// .block-about-us__logo-img
+	
+		&__logo-img {
+			width: calc($index * 1.33 * $coaficent-md);
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	
+		// .block-about-us__logo-text
+	
+		&__logo-text {
+			font-family: $titlefont;
+			font-weight: 100;
+			font-size: calc($index * 1.06 * $coaficent-md);
+			line-height: 1.3;
+			color: #f5f5f5;
+		}
+	
+		// .block-about-us__title-text
+	
+		&__title-text {
+			font-weight: 300;
+			font-size: calc($index * 0.8 * $coaficent-md);
+			line-height: 1.3;
+			color: rgba(#f5f5f5, 0.75);
+			padding: 0 calc($index * 0.5);
+		}
+	
+		// .block-about-us__row
+	
+		&__row {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: calc($index * 5.33);
+			padding: calc($index * 4.33) calc($index * 1) calc($index * 1);
+			margin: 0 auto;
+		}
+	
+		// .block-about-us__content
+	
+		&__content {
+			//flex: 1 1 auto;
+		}
+	
+		// .block-about-us__item
+	
+		&__item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: calc($index * 2);
+			&:not(:last-child) {
+				margin-bottom: calc($index * 2.16 * $coaficent-md);
+			}
+		}
+	
+		// .block-about-us__item-img
+	
+		&__item-img {
+			flex: 1 0 calc($index * 8);
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	
+		// .block-about-us__item-text
+	
+		&__item-text {
+			font-weight: 300;
+			font-size: calc($index * 0.8 * $coaficent-md);
+			line-height: 1.3;
+			color: rgba(#f5f5f5, 0.75);
+			margin: 0;
+			opacity: 0.75;
+		}
+	
+		// .block-about-us__contact
+	
+		&__contact {
+			font-weight: 300;
+			font-size: calc($index * 0.6 * $coaficent-md);
+			line-height: 1.3;
+			color: rgba(#f5f5f5, 0.75);
+			margin-bottom: calc($index * 1 * $coaficent-md);
+			max-width: calc($index * 27.9);
+		}
+	
+		// .block-about-us__contact-img
+	
+		&__contact-img {
+			width: calc($index * 4.46 * $coaficent-md);
+			height: calc($index * 4.46 * $coaficent-md);
+			margin-bottom: calc($index * 0.66 * $coaficent-md);
+			border: calc($index * 0.06 * $coaficent-md) solid #424242;
+			padding: calc($index * 0.23 * $coaficent-md);
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	
+		// .block-about-us__contact-subtitle
+	
+		&__contact-subtitle {
+			margin-bottom: calc($index * 0.43 * $coaficent-md);
+			max-width: calc($index * 10.66 * $coaficent-md);
+		}
+	
+		// .block-about-us__contact-title
+	
+		&__contact-title {
+			margin-bottom: calc($index * 1.66 * $coaficent-md);
+			h4 {
+				font-weight: 700;
+				font-size: calc($index * 0.66 * $coaficent-md);
+				line-height: 1.3;
+				margin: 0;
+			}
+			p {
+				margin: 0;
+			}
+		}
+	
+		// .block-about-us__contact-buttons
+	
+		&__contact-buttons {
+			display: flex;
+			flex-direction: column;
+			gap: calc($index * 0.43 * $coaficent-md);
+		}
+	
+		// .block-about-us__contact-button
+	
+		&__contact-button {
+			padding: calc($index * 0.5 * $coaficent-md) calc($index * 1) !important;
+		}
+	}
 
 	@include media-breakpoint-up(lg) {
 		padding-top: calc($index * 1.5);
@@ -319,13 +369,9 @@
 		// .block-about-us__row
 
 		&__row {
-			grid-template-columns: 1fr calc($index * 17);
-			gap: calc($index * 5.33);
-			padding: calc($index * 4.33 * $coaficent-sm)
-			calc($index * 3.33 * $coaficent-sm) calc($index * 3.33 * $coaficent-sm);
-			//height: calc(100% - $index * 2.1);
-			
-
+			grid-template-columns: 2fr 1fr;
+			gap: calc($index * 4);
+			padding: calc($index * 4.33) calc($index * 3.33) calc($index * 3.33);
 		}
 
 		// .block-about-us__content
@@ -337,6 +383,8 @@
 		// .block-about-us__item
 
 		&__item {
+			flex-direction: row;
+			align-items: center;
 			gap: calc($index * 2);
 			&:not(:last-child) {
 				margin-bottom: calc($index * 2.16);
@@ -346,7 +394,7 @@
 		// .block-about-us__item-img
 
 		&__item-img {
-			flex: 0 0 calc($index * 8.66);
+			flex: 0 0 calc($index * 6);
 		}
 
 		// .block-about-us__item-text
@@ -391,6 +439,7 @@
 		// .block-about-us__contact-buttons
 
 		&__contact-buttons {
+			flex-direction: row;
 			gap: calc($index * 0.43);
 		}
 

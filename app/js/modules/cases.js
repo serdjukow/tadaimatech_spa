@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Thumbs } from "swiper";
+import Swiper, { Navigation, Thumbs, Pagination } from "swiper";
 const sliderCases = () => {
 	function casesToHtml() {
 		const pageBody = document.querySelector(".page-content");
@@ -13,6 +13,7 @@ const sliderCases = () => {
             </p>
         </div>
         <div class="block-cases__container">
+				<div class="swiper-pagination"></div>
         <!-- Slider main container -->
         <div class="swiper slider-cases">
             <!-- Additional required wrapper -->
@@ -329,7 +330,7 @@ const sliderCases = () => {
 	});
 
 	const sliderCases = new Swiper(".slider-cases", {
-		modules: [Navigation, Thumbs],
+		modules: [Navigation, Thumbs, Pagination],
 		loop: false,
 		slidesPerView: 1,
 		freeMode: false,
@@ -337,9 +338,16 @@ const sliderCases = () => {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + "</span>";
+			},
+		},
 		thumbs: {
 			swiper: sliderCasesLogo,
-		},
+		}
 	});
 };
 
