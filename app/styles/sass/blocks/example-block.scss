@@ -84,7 +84,7 @@
 	p {
 		font-size: calc($index * 0.67 * $coaficent-sm);
 		position: absolute;
-		width: 100%;
+		min-width: 100%;
 		white-space: nowrap;
 		margin: 0;
 		opacity: 0.75;
