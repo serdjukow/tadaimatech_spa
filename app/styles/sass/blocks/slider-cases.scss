@@ -7,14 +7,15 @@
 		margin: 0 auto;
 		padding-bottom: calc($index * 2);
 	}
-
-	.swiper-button-prev,
-	.swiper-button-next {
-		display: none;
+	.page-title {
+		p {
+			color: $accent;
+		}
 	}
 
 	.swiper-button-prev,
 	.swiper-button-next {
+		display: none;
 		width: calc($index * 1.03);
 		height: calc($index * 1.46);
 		background-color: $black;
@@ -28,7 +29,7 @@
 			}
 		}
 		&::after {
-			color: #f5f5f5;
+			color: $accent;
 			font-size: calc($index * 0.6);
 		}
 	}
@@ -63,6 +64,7 @@
 	.swiper-pagination-bullet-active {
 		background-color: #303030;
 	}
+
 	@include media-breakpoint-up(sm) {
 		padding-top: calc($index * 0.5);
 		&__container {
@@ -74,18 +76,8 @@
 			display: flex;
 			width: calc($index * 1.03);
 			height: calc($index * 1.46);
-			background-color: $black;
-			border: 1px solid #8f8f8f;
-			transition: background-color 0.25s ease, border 0.25s ease;
 			top: calc($index * 10 * $coaficent-md);
-			@media (any-hover: hover) {
-				&:hover {
-					background-color: lighten($black, 5%);
-					border: 1px solid lighten(#8f8f8f, 5%);
-				}
-			}
 			&::after {
-				color: #f5f5f5;
 				font-size: calc($index * 0.6);
 			}
 		}
@@ -96,16 +88,11 @@
 		}
 	
 		.swiper-pagination-bullet {
-			display: inline-block;
-			font-family: noto-sans-tm;
 			font-size: calc($index * .46 * $coaficent-md);
 			line-height: calc($index * .9 * $coaficent-md);
 			width: calc($index * 1 * $coaficent-md);
 			height: calc($index * 1 * $coaficent-md);
-			margin: 0 calc($index * .33 * $coaficent-md) !important;
-			background-color: #2c2c2c;
-			border: 1px solid #8f8f8f;
-		
+			margin: 0 calc($index * .33 * $coaficent-md) !important;		
 		}
 	}
 	@include media-breakpoint-up(lg) {
@@ -124,16 +111,11 @@
 			}
 		}
 		.swiper-pagination-bullet {
-			display: inline-block;
-			font-family: noto-sans-tm;
 			font-size: calc($index * .46);
 			line-height: calc($index * .9);
 			width: calc($index * 1);
 			height: calc($index * 1);
-			margin: 0 calc($index * .33) !important;
-			background-color: #2c2c2c;
-			border: 1px solid #8f8f8f;
-		
+			margin: 0 calc($index * .33) !important;		
 		}
 	}
 }

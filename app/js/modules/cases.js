@@ -25,7 +25,6 @@ const sliderCases = () => {
                         <video
                             controls="controls"
                             poster=""
-                            autoplay
                             loop
                             muted
                         >
@@ -45,7 +44,6 @@ const sliderCases = () => {
                         <video
                             controls="controls"
                             poster=""
-                            autoplay
                             loop
                             muted
                         >
@@ -64,7 +62,6 @@ const sliderCases = () => {
 										<video
 												controls="controls"
 												poster=""
-												autoplay
 												loop
 												muted
 										>
@@ -83,7 +80,6 @@ const sliderCases = () => {
 									<video
 											controls="controls"
 											poster=""
-											autoplay
 											loop
 											muted
 									>
@@ -102,7 +98,6 @@ const sliderCases = () => {
 								<video
 										controls="controls"
 										poster=""
-										autoplay
 										loop
 										muted
 								>
@@ -347,7 +342,7 @@ const sliderCases = () => {
 		},
 		thumbs: {
 			swiper: sliderCasesLogo,
-		}
+		},
 	});
 };
 

@@ -280,12 +280,11 @@
 			}
 		}
 	}
-}
-@include media-breakpoint-up(lg) {
-	.settings-panel-left {
+	@include media-breakpoint-up(lg) {
 		display: block;
 	}
 }
+
 .panel-settings {
 	// .panel-settings__bonus
 
