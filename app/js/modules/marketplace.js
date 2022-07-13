@@ -1,6 +1,9 @@
 const marketplace = () => {
+	const hostName = location.hostname;
+	const pathName = location.pathname;
+	console.log(pathName);
 	const sendRequest = async () => {
-		const url = "../db/marketplace.json";
+		const url = `./db/marketplace.json`;
 		try {
 			const response = await fetch(url);
 			const bd = await response.json();

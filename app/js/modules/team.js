@@ -80,13 +80,14 @@ const team = () => {
 	});
 
 	const sendRequest = async () => {
-		const url = "../db/pages.json";
+		const pathName = location.pathname;
+		const url = `./db/pages.json`;
 
 		try {
-			const response = await fetch(url);			
+			const response = await fetch(url);
 			const bd = await response.json();
-			const  { sliderTeam }  = bd[0]
-			teamToHtml( ...sliderTeam );
+			const { sliderTeam } = bd[0];
+			teamToHtml(...sliderTeam);
 			sliderTeamLogo.init();
 		} catch (e) {
 			console.error(e.message);

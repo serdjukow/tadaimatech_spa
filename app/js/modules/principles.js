@@ -111,7 +111,7 @@ function principles() {
 	}
 
 	const sendRequest = async () => {
-		const url = "../db/pages.json";
+		const url = "./db/pages.json";
 		try {
 			const response = await fetch(url);
 			const bd = await response.json();
