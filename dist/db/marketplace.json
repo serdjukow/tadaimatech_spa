@@ -1,0 +1,165 @@
+[
+	{
+		"marketplace": [
+			{
+				"setTitle": "Обычная",
+				"setCards": [
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#5e5a5a"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#000000"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#462829"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#5e5a5a"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#ffffff"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#3c67ff"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#000000"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "15 000",
+						"cardImg": "article.png",
+						"cardColor": "#b79a00"
+					}
+				]
+			},
+			{
+				"setTitle": "шикарная",
+				"setCards": [
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#5e5a5a"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#000000"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#462829"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#5e5a5a"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#ffffff"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#3c67ff"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#000000"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "25 000",
+						"cardImg": "article.png",
+						"cardColor": "#b79a00"
+					}
+				]
+			},
+			{
+				"setTitle": "Премиум",
+				"setCards": [
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#5e5a5a"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#000000"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#462829"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#5e5a5a"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#ffffff"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#3c67ff"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#000000"
+					},
+					{
+						"cardTitle": "BOKAI / Трусы",
+						"cardPrice": "35 000",
+						"cardImg": "article.png",
+						"cardColor": "#b79a00"
+					}
+				]
+			}
+		]
+	}
+]
