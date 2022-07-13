@@ -1,5 +1,5 @@
 const aboutUs = () => {
-    function aboutUsToHtml() {
+    function aboutUsToHtml( aboutUs ) {
         const pageBody = document.querySelector(".page-content");
         pageBody.innerHTML = "";
         pageBody.innerHTML = `
@@ -15,7 +15,7 @@ const aboutUs = () => {
                 </div>
             </div>
             <div class="block-about-us__title-text">
-                Спутник цифровых трансформаций Вашего бизнеса!
+                ${ aboutUs.pageTitle || '' }
             </div>
         </div>
         <div class="block-about-us__row">
@@ -24,38 +24,56 @@ const aboutUs = () => {
                     <div class="block-about-us__item-img">
                         <img src="images/dist/about-us.png" alt="about-us">
                     </div>
-                    <p class="block-about-us__item-text">Мы — команда из 35 профессионалов в области разработки цифровых решений для бизнеса.</p>
+                    <p class="block-about-us__item-text">
+											${ aboutUs.company || '' }
+										</p>
                 </div>
                 <div class="block-about-us__item">
                     <div class="block-about-us__item-img">
                         <img src="images/dist/mission.png" alt="about-us">
                     </div>
-                    <p class="block-about-us__item-text">Мы помогаем бизнесу и государственным организациям эффективно выстроить работу и коммуникации в цифровую эпоху.</p>
+                    <p class="block-about-us__item-text">
+										${ aboutUs.mission || '' }
+										</p>
                 </div>
             </div>
             <div class="block-about-us__contact">
                 <div class="block-about-us__contact-img">
-                    <img src="images/dist/assistant.png" alt="assistant">
+                    <img src="images/dist/${ aboutUs.consultant.photo || '' }" alt="assistant">
                 </div>
                 <p class="block-about-us__contact-subtitle">
-                    Ваш личный помощник в разработке решения для Вашего бизнеса:
+									${ aboutUs.consultant.text || '' }
                 </p>
                 <div class="block-about-us__contact-title">
                     <h4>
-                        Леонид Орещенко	
+											${ aboutUs.consultant.name || '' }
                     </h4>
-                    <p>Продюсер цифровых решений</p>
+                    <p>${ aboutUs.consultant.post || '' }</p>
                 </div>
                 <div class="block-about-us__contact-buttons">
-                    <button class="block-about-us__contact-button button">написать на почту</button>
-                    <button class="block-about-us__contact-button button">Написать в telegram</button>
+                    <a href="mailto:${ aboutUs.consultant.mailLink || '' }" class="block-about-us__contact-button button">написать на почту</a>
+                    <a href="${ aboutUs.consultant.tgLink || '' }" class="block-about-us__contact-button button">Написать в telegram</a>
                 </div>
             </div>
         </div>
     </div>
         `;
     }
-    aboutUsToHtml()
+    
+
+		const sendRequest = async () => {
+			const url = "../db/pages.json";
+	
+			try {
+				const response = await fetch(url);
+				const bd = await response.json();
+				const  { aboutUs }  = bd[0]
+				aboutUsToHtml( aboutUs )
+			} catch (e) {
+				console.error(e.message);
+			}
+		};
+		sendRequest();
 
 }
 

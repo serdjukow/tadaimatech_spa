@@ -8,6 +8,7 @@
 		position: relative;
 		height: calc($index * 22);
 		margin-bottom: calc($index * 1);
+		width: 100%;
 		img,
 		iframe {
 			position: absolute;
@@ -98,15 +99,34 @@
 			opacity: 0.75;
 		}
 
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: color .25s ease;
+			@media(any-hover: hover) {
+				&:hover {
+					color: rgba($white, 1);
+				}
+			}
+		}
+
+		&__doc {
+			font-family: noto-sans-tm;
+			&::before {
+				background-size: 55%;
+				background-image: url(../images/dist/icons/doc2.svg);
+				fill: #fff;
+				color: #fff;
+			}
+		}
+
 		// .form-info__address
 
 		&__address {
+			font-family: noto-sans-tm;
 			&::before {
 				background-size: 55%;
 				background-image: url(../images/dist/icons/address.svg);
-			}
-			span {
-				font-family: noto-sans-tm;
 			}
 		}
 

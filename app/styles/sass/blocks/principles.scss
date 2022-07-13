@@ -10,9 +10,6 @@
 	// .block-principles__menu
 
 	&__menu {
-		display: flex;
-		flex-wrap: wrap;
-		gap: calc($index * .5 * $coaficent-sm);
 		list-style: none;
 		margin: calc($index * 1) 0 0;
 		padding: 0;
@@ -33,7 +30,7 @@
 		transition: 0.25s ease;
 		cursor: pointer;
 		&:not(:last-child) {
-			margin-bottom: 0;
+			margin-bottom: calc($index * 1.16);
 		}
 		&::before {
 			content: "";
@@ -148,11 +145,8 @@
 		// .block-principles__menu-item
 
 		&__menu-item {
-			font-size: calc($index * 0.66 * $coaficent-md);
-			
-			&:not(:last-child) {
-				margin-bottom: 0;
-			}
+			font-size: calc($index * 0.66 * $coaficent-md);		
+
 			&::before {
 				flex: 0 0 calc($index * 0.26);
 				height: calc($index * 0.5);
@@ -215,7 +209,6 @@
 
 		&__menu {
 			display: block;
-			gap: calc($index * .5 * $coaficent-md);
 			margin: calc($index * 1) 0 0;
 		}
 

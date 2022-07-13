@@ -23,6 +23,12 @@
 			&::after {
 				width: 100%;
 			}
+			&__title {
+				opacity: 1;
+				&::before {
+					opacity: .25;
+				}
+			}
 		}
 		.stores {
 			margin-left: 0;
@@ -262,7 +268,6 @@
 		text-transform: uppercase;
 		user-select: none;
 		transition: color 0.25s ease;
-
 		&::before {
 			flex: 0 0 calc($index * 1.33 * $coaficent-sm);
 			content: "";
@@ -270,7 +275,7 @@
 			width: calc($index * 1.33 * $coaficent-sm);
 			height: calc($index * 1.33 * $coaficent-sm);
 			border: 1px solid #fff;
-			opacity: 0.25;
+			opacity: 0;
 			margin-right: calc($index * 0.66 * $coaficent-sm);
 			background-position: center center;
 			background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 import Swiper, { Navigation, Thumbs } from "swiper";
-import marketplaceToHtml from "./modules/marketplace.js";
+import marketplace from "./modules/marketplace.js";
 import sliderServices from "./modules/services.js";
 import sliderCases from "./modules/cases.js";
 import aboutUs from "./modules/about-us.js";
@@ -33,40 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	currentDate();
 
-	const menu = () => {
-		const navBurger = document.querySelector("#nav-burger");
-		const navigation = document.querySelector(".navigation");
-		const body = document.querySelector("body");
-		const bodyOverlay = document.querySelector(".body-overlay");
-
-		navBurger.addEventListener("click", (e) => {
-			let el = e.target;
-			el.closest("._active") ? removeNavActive() : addNavActive();
-		});
-
-		bodyOverlay.addEventListener("click", () => {
-			removeNavActive();
-		});
-
-		const addNavActive = () => {
-			navBurger.classList.add("_active");
-			navigation.classList.add("_active");
-			body.classList.add("_lock");
-			bodyOverlay.classList.add("_active");
-		};
-
-		const removeNavActive = () => {
-			navBurger.classList.remove("_active");
-			navigation.classList.remove("_active");
-			body.classList.remove("_lock");
-			bodyOverlay.classList.remove("_active");
-		};
-	};
-	menu();
-
 	const menuSettings = () => {
 		const settingsBurger = document.querySelector("#settings-burger");
-		const headerLeft = document.querySelector(".header__left");
+		const headerLeft = document.querySelector(".game-navigation");
 		const body = document.querySelector("body");
 		const bodyOverlay = document.querySelector(".body-overlay");
 
@@ -114,6 +83,37 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	const menu = () => {
+		const navBurger = document.querySelector("#nav-burger");
+		const navigation = document.querySelector(".navigation");
+		const body = document.querySelector("body");
+		const bodyOverlay = document.querySelector(".body-overlay");
+
+		navBurger.addEventListener("click", (e) => {
+			let el = e.target;
+			el.closest("._active") ? removeNavActive() : addNavActive();
+		});
+
+		bodyOverlay.addEventListener("click", () => {
+			removeNavActive();
+		});
+
+		const addNavActive = () => {
+			navBurger.classList.add("_active");
+			navigation.classList.add("_active");
+			body.classList.add("_lock");
+			bodyOverlay.classList.add("_active");
+		};
+
+		const removeNavActive = () => {
+			navBurger.classList.remove("_active");
+			navigation.classList.remove("_active");
+			body.classList.remove("_lock");
+			bodyOverlay.classList.remove("_active");
+		};
+	};
+	menu();
+
 	function navigation() {
 		const menuItems = document.querySelectorAll("[data-menu]");
 		const navBurger = document.querySelector("#nav-burger");
@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	navigation();
 
 	function pageContent(page) {
+		
 		page === "home" && startContent();
 		page === "about-us" && aboutUs();
 		page === "services" && sliderServices();
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		page === "cases" && sliderCases();
 		page === "contacts" && contacts();
 		page === "principles" && principles();
-		page === "marketplace" && marketplaceToHtml();
+		page === "marketplace" && marketplace();
 	}
 
 	function messageTimer() {
@@ -178,5 +179,4 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 1000);
 	}
 	messageTimer();
-
 });

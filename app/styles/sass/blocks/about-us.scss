@@ -39,6 +39,7 @@
 		font-size: calc($index * 1.06 * $coaficent-sm);
 		line-height: 1.3;
 		color: #f5f5f5;
+
 	}
 
 	// .block-about-us__title-text
@@ -49,6 +50,7 @@
 		line-height: 1.3;
 		color: rgba(#f5f5f5, 0.75);
 		padding: 0 calc($index * 0.5);
+		text-align: center;
 	}
 
 	// .block-about-us__row
@@ -72,7 +74,7 @@
 	&__item {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		gap: calc($index * 2);
 		&:not(:last-child) {
 			margin-bottom: calc($index * 2.16 * $coaficent-sm);
@@ -82,10 +84,13 @@
 	// .block-about-us__item-img
 
 	&__item-img {
-		flex: 1 0 calc($index * 6);
+		flex: 1 1 calc($index * 12);
+		max-width: calc($index * 12);
+		transform: rotate(90deg);
 		img {
 			display: block;
 			width: 100%;
+			
 		}
 	}
 
@@ -97,20 +102,18 @@
 		line-height: 1.3;
 		color: rgba(#f5f5f5, 0.75);
 		margin: 0;
-		opacity: 0.75;
+		text-align: center; 
 	}
 
 	// .block-about-us__contact
 
 	&__contact {
-		//flex: 0 0 calc($index * 17);
-
 		font-weight: 300;
-		font-size: calc($index * 0.6 * $coaficent-sm);
+		font-size: calc($index * 0.8 * $coaficent-sm);
 		line-height: 1.3;
 		color: rgba(#f5f5f5, 0.75);
-		//margin-left: calc($index * 1 * $coaficent-sm);
-		margin-bottom: calc($index * 1 * $coaficent-sm);
+		margin: 0 auto;
+		padding-bottom: calc($index * 1 * $coaficent-sm);
 		max-width: calc($index * 27.9);
 	}
 
@@ -119,33 +122,36 @@
 	&__contact-img {
 		width: calc($index * 4.46 * $coaficent-sm);
 		height: calc($index * 4.46 * $coaficent-sm);
-		margin-bottom: calc($index * 0.66 * $coaficent-sm);
-		border: calc($index * 0.06 * $coaficent-sm) solid #424242;
+		margin: 0 auto calc($index * 0.66 * $coaficent-sm) auto;
+		border: 1px solid #424242;
 		padding: calc($index * 0.23 * $coaficent-sm);
 		border-radius: 50%;
 		overflow: hidden;
 		img {
 			display: block;
 			width: 100%;
+			border-radius: 50%;
 		}
 	}
 
 	// .block-about-us__contact-subtitle
 
 	&__contact-subtitle {
-		margin-bottom: calc($index * 0.43 * $coaficent-sm);
-		max-width: calc($index * 10.66 * $coaficent-sm);
+		margin: 0 0 calc($index * 0.43 * $coaficent-sm)  0;
+		text-align: center;
 	}
 
 	// .block-about-us__contact-title
 
 	&__contact-title {
 		margin-bottom: calc($index * 1.66 * $coaficent-sm);
+		text-align: center;
 		h4 {
 			font-weight: 700;
-			font-size: calc($index * 0.66 * $coaficent-sm);
+			font-size: calc($index * 0.8 * $coaficent-sm);
 			line-height: 1.3;
 			margin: 0;
+			color:rgba($accent, 0.75)
 		}
 		p {
 			margin: 0;
@@ -167,25 +173,16 @@
 	}
 
 	@include media-breakpoint-up(sm) {
-		position: relative;
 		padding-top: calc($index * 0.5 * $coaficent-md);
 		// .block-about-us__title
 	
 		&__title {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			gap: calc($index * 1);
-			border-bottom: 1px solid rgba(#f5f5f5, 0.05);
 			padding-bottom: calc($index * 0.66 * $coaficent-md);
 		}
 	
 		// .block-about-us__logo
 	
 		&__logo {
-			display: flex;
-			align-items: center;
 			gap: calc($index * 0.5 * $coaficent-md);
 		}
 	
@@ -193,40 +190,23 @@
 	
 		&__logo-img {
 			width: calc($index * 1.33 * $coaficent-md);
-			img {
-				display: block;
-				width: 100%;
-			}
 		}
 	
 		// .block-about-us__logo-text
 	
 		&__logo-text {
-			font-family: $titlefont;
-			font-weight: 100;
 			font-size: calc($index * 1.06 * $coaficent-md);
-			line-height: 1.3;
-			color: #f5f5f5;
 		}
 	
 		// .block-about-us__title-text
 	
 		&__title-text {
-			font-weight: 300;
 			font-size: calc($index * 0.8 * $coaficent-md);
-			line-height: 1.3;
-			color: rgba(#f5f5f5, 0.75);
-			padding: 0 calc($index * 0.5);
 		}
 	
 		// .block-about-us__row
 	
 		&__row {
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: calc($index * 5.33);
-			padding: calc($index * 4.33) calc($index * 1) calc($index * 1);
-			margin: 0 auto;
 		}
 	
 		// .block-about-us__content
@@ -238,7 +218,6 @@
 		// .block-about-us__item
 	
 		&__item {
-			display: flex;
 			flex-direction: row;
 			align-items: center;
 			gap: calc($index * 2);
@@ -250,29 +229,22 @@
 		// .block-about-us__item-img
 	
 		&__item-img {
-			flex: 1 0 calc($index * 8);
-			img {
-				display: block;
-				width: 100%;
-			}
+			flex: 1 0 calc($index * 9);
+			transform: rotate(0deg);
 		}
 	
 		// .block-about-us__item-text
 	
 		&__item-text {
-			font-weight: 300;
 			font-size: calc($index * 0.8 * $coaficent-md);
-			line-height: 1.3;
-			color: rgba(#f5f5f5, 0.75);
-			margin: 0;
-			opacity: 0.75;
+			text-align: start;
 		}
 	
 		// .block-about-us__contact
 	
 		&__contact {
 			font-weight: 300;
-			font-size: calc($index * 0.6 * $coaficent-md);
+			font-size: calc($index * 0.8 * $coaficent-md);
 			line-height: 1.3;
 			color: rgba(#f5f5f5, 0.75);
 			margin-bottom: calc($index * 1 * $coaficent-md);
@@ -284,22 +256,16 @@
 		&__contact-img {
 			width: calc($index * 4.46 * $coaficent-md);
 			height: calc($index * 4.46 * $coaficent-md);
-			margin-bottom: calc($index * 0.66 * $coaficent-md);
-			border: calc($index * 0.06 * $coaficent-md) solid #424242;
+			margin: 0 auto calc($index * 0.66 * $coaficent-md) auto;
 			padding: calc($index * 0.23 * $coaficent-md);
-			border-radius: 50%;
-			overflow: hidden;
-			img {
-				display: block;
-				width: 100%;
-			}
+		
 		}
 	
 		// .block-about-us__contact-subtitle
 	
 		&__contact-subtitle {
 			margin-bottom: calc($index * 0.43 * $coaficent-md);
-			max-width: calc($index * 10.66 * $coaficent-md);
+			//max-width: calc($index * 10.66 * $coaficent-md);
 		}
 	
 		// .block-about-us__contact-title
@@ -307,22 +273,13 @@
 		&__contact-title {
 			margin-bottom: calc($index * 1.66 * $coaficent-md);
 			h4 {
-				font-weight: 700;
-				font-size: calc($index * 0.66 * $coaficent-md);
-				line-height: 1.3;
-				margin: 0;
-				color:rgba($accent, 0.75)
-			}
-			p {
-				margin: 0;
+				font-size: calc($index * 0.8 * $coaficent-md);
 			}
 		}
 	
 		// .block-about-us__contact-buttons
 	
 		&__contact-buttons {
-			display: flex;
-			flex-direction: column;
 			gap: calc($index * 0.43 * $coaficent-md);
 		}
 	
@@ -379,6 +336,7 @@
 
 		&__content {
 			margin-bottom: 0;
+		
 		}
 
 		// .block-about-us__item
@@ -407,7 +365,7 @@
 		// .block-about-us__contact
 
 		&__contact {
-			font-size: calc($index * 0.6);
+			font-size: calc($index * 0.8);
 			margin: 0;
 		}
 
@@ -416,7 +374,7 @@
 		&__contact-img {
 			width: calc($index * 4.46);
 			height: calc($index * 4.46);
-			margin-bottom: calc($index * 0.66);
+			margin: 0 auto calc($index * 0.66) auto;
 			border: calc($index * 0.06) solid #424242;
 			padding: calc($index * 0.23);
 		}
@@ -424,8 +382,8 @@
 		// .block-about-us__contact-subtitle
 
 		&__contact-subtitle {
-			margin-bottom: calc($index * 0.43);
-			max-width: calc($index * 10.66);
+			margin: 0 auto calc($index * 0.43) auto;
+			max-width: calc($index * 12.66);			
 		}
 
 		// .block-about-us__contact-title
@@ -433,7 +391,7 @@
 		&__contact-title {
 			margin-bottom: calc($index * 1.66);
 			h4 {
-				font-size: calc($index * 0.66);
+				font-size: calc($index * 0.8);
 			}
 		}
 

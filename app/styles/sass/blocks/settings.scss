@@ -1,3 +1,54 @@
+.game-navigation {
+	position: absolute;
+	top: calc($index * 0.33);
+	bottom: calc($index * 0.33);
+	max-width: calc($index * 23);
+	padding-top: calc($index * 1.5);
+	left: -100%;		
+	transition: left 0.3s;
+	z-index: 100;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		height: 100%;
+	}
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: calc($index * 1.9 * $coaficent-sm);
+		width: 100%;
+		background-color: #303030;
+		z-index: 100;
+		@include media-breakpoint-up(sm) {
+			height: calc($index * 1.9 * $coaficent-md);
+		}
+		@include media-breakpoint-up(lg) {
+			height: calc($index * 1.9);
+		}
+	}
+	&._active {
+		left: 0;
+		transition: left 0.3s;
+	}
+}
+
+.game {
+	position: relative;
+	width: 100%;
+	flex: 1 1 auto;
+	padding: calc($index * 0.7) calc($index * 0.7);
+
+	border-bottom: calc($index * 0.34) solid #2c2c2c;
+	&__body {
+		position: relative;
+		min-height: 100%;
+	}
+}
+
 .settings {
 	position: relative;
 	user-select: none;
