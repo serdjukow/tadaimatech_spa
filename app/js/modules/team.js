@@ -80,9 +80,7 @@ const team = () => {
 	});
 
 	const sendRequest = async () => {
-		const pathName = location.pathname;
 		const url = `./db/pages.json`;
-
 		try {
 			const response = await fetch(url);
 			const bd = await response.json();
