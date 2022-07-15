@@ -3,8 +3,8 @@
 	top: calc($index * 0.33);
 	bottom: calc($index * 0.33);
 	max-width: calc($index * 23 * $coaficent-md);
-	padding-top: calc($index * 1.5 * $coaficent-md);
-	left: -100%;
+	padding-top: calc($index * 1.5 * $coaficent-sm);
+	left: -110%;
 	transition: left 0.3s;
 	z-index: 100;
 	&__container {
@@ -34,6 +34,9 @@
 		left: 0;
 		transition: left 0.3s;
 	}
+	@include media-breakpoint-up(sm) {
+		padding-top: calc($index * 1.5 * $coaficent-md);
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: calc($index * 1.5);
 		max-width: calc($index * 23);
@@ -61,11 +64,9 @@
 	// .settings__progress
 
 	&__progress {
-		margin-bottom: calc($index * 1 * $coaficent-md);
-	}
-	@include media-breakpoint-up(lg) {
 		margin-bottom: calc($index * 1);
 	}
+
 }
 .progress-block {
 	// .progress-block__title
@@ -279,7 +280,7 @@
 
 	&__progress {
 		&:not(:last-child) {
-			margin-bottom: calc($index * 0.466 * $coaficent-md);
+			margin-bottom: calc($index * 0.466);
 		}
 	}
 

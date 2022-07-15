@@ -12,6 +12,7 @@ import {
 	menuLinkMessage,
 	cookieMessage,
 	assistantMessage,
+	soonMessage
 } from "./modules/messages.js";
 import {
 	preloaderToHtml,
@@ -25,7 +26,15 @@ import marquee from "./modules/marquee.js";
 document.addEventListener("DOMContentLoaded", () => {
 	settingsToHtml();
 	marquee();
-	cookieMessage();
+	soonMessage()
+
+	document.addEventListener('click', (e) => {
+		let el = e.target
+		if(el.closest('#soon')) {
+			document.querySelector("[data-menu='about-us']").click()
+			document.querySelector("#settings-burger").click()
+		}
+	})
 
 	const currentDate = () => {
 		let currentYear = new Date().getFullYear();
@@ -39,14 +48,24 @@ document.addEventListener("DOMContentLoaded", () => {
 		const body = document.querySelector("body");
 		const bodyOverlay = document.querySelector(".body-overlay");
 
+		const navBurger = document.querySelector("#nav-burger");
+		const navigation = document.querySelector(".navigation");
+
 		document.addEventListener("click", (e) => {
 			let el = e.target;
-			el.closest("#settings-burger") && toggleNavActive();
+			el.closest("#settings-burger") && toggleNavActive() & removeNavActive();
 		});
 
 		const toggleNavActive = () => {
 			settingsBurger.classList.toggle("_active");
 			headerLeft.classList.toggle("_active");
+		};
+
+		const removeNavActive = () => {
+			navBurger.classList.remove("_active");
+			navigation.classList.remove("_active");
+			body.classList.remove("_lock");
+			bodyOverlay.classList.remove("_active");
 		};
 	};
 	menuSettings();
@@ -89,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		const body = document.querySelector("body");
 		const bodyOverlay = document.querySelector(".body-overlay");
 
+		const settingsBurger = document.querySelector("#settings-burger");
+		const headerLeft = document.querySelector(".game-navigation");
+
 		navBurger.addEventListener("click", (e) => {
 			let el = e.target;
 			el.closest("._active") ? removeNavActive() : addNavActive();
@@ -103,6 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			navigation.classList.add("_active");
 			body.classList.add("_lock");
 			bodyOverlay.classList.add("_active");
+
+			settingsBurger.classList.remove("_active");
+			headerLeft.classList.remove("_active");
 		};
 
 		const removeNavActive = () => {
@@ -110,6 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			navigation.classList.remove("_active");
 			body.classList.remove("_lock");
 			bodyOverlay.classList.remove("_active");
+
+			settingsBurger.classList.remove("_active");
+			headerLeft.classList.remove("_active");
 		};
 	};
 	menu();
