@@ -138,11 +138,12 @@
 
 	&__video {
 		margin-bottom: calc($index * 0.83);
-		video {
+		overflow: hidden;
+		video,
+		img {
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
 		}
 	}
 
@@ -247,13 +248,11 @@
 
 	&__icon {
 		display: inline-block;
-		height: calc($index * 2.7);
 		margin-bottom: calc($index * 0.83);
 		img {
 			display: block;
 			width: 100%;
 			height: 100%;
-			//object-fit: cover;
 		}
 	}
 

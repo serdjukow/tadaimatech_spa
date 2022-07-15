@@ -246,48 +246,10 @@
 
 	&__item {
 		flex: 0 1 auto;
-		width: calc($index * 5.66);
-		height: calc($index * 5.66);
 		position: relative;
 		img {
 			display: block;
 			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-	
-
-	@include media-breakpoint-up(lg) {
-		margin: 0 auto;
-
-		// .slider-services-logo__slide
-
-		&__slide {
-			min-height: 1px;
-		}
-
-		// .slider-services-logo__items
-
-		&__items {
-			display: flex;
-			justify-content: center;
-			gap: calc($index * 2.33);
-		}
-
-		// .slider-services-logo__item
-
-		&__item {
-			flex: 0 1 auto;
-			width: calc($index * 5.66);
-			height: calc($index * 5.66);
-			position: relative;
-			img {
-				display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
 		}
 	}
 }
